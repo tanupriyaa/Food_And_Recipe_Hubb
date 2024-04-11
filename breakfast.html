@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>FoodRecipeHub</title>
+</head>
+<body>    
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="./img/logo1.png" class="brand-name">
+            <a href="#" class="bg">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Meals
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="breakfast.html">Breakfast</a>
+                          <a href="lunch.html">Lunch</a>
+                          <a href="dinner.html">Dinner</a>
+                          <a href="desserts.html">Desserts</a>
+                        </div>
+                      </div></li>
+                      <li><div class="dropdown">
+                        <button class="dropbtn">Occassions
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="ganesh.html">Ganesh Chaturthi</a>
+                          <a href="dasara.html">Dussehra</a>
+                          <a href="diwali.html">Diwali</a>
+                          <a href="ramzan.html">Ramzan</a>
+                          <a href="christmas.html">Christmas</a>
+                          <a href="sankranti.html">Makar Sankranti</a>
+                        </div>
+                      </div></li>
+                      
+                      </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form id="form" role="search">
+                          <input
+                            type="search"
+                            id="query"
+                            name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content"
+                          />
+                          <button style="width: 10px">&#8981;</button>
+                        </form>
+                        <script>
+                          const f = document.getElementById("form");
+                          const q = document.getElementById("query");
+                          const google = "https://www.allrecipes.com/";
+                          const site = "";
+        
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + "+" + q.value;
+                            const win = window.open(url, "_blank");
+                            win.focus();
+                          }
+        
+                          f.addEventListener("submit", submitted);
+                        </script>
+                </ul>
+            </div>
+        </nav>
+        <div class="headerbf">
+        <!-- Main Content -->
+        <div class="card-grid" >
+            <div class="food-list" id="food-list">
+                    <p id="none" style="display: none;">Sorry, the food you were looking for is not available.</p>
+                    
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/Omelette.webp">
+                        </div>
+                        <div class="card-body" >
+                            <h3>Omelette</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get4thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/pancakes.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Pan cakes</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get7thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    
+            </div> 
+
+            <!--Ending of Main Content-->
+
+            <div class = "four-meal-detail" id="four-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Omelette</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">In cuisine, an omelette is a dish made from beaten eggs, fried with butter or oil in a frying pan. It is quite common for the omelette to be folded around fillings such as chives, vegetables, mushrooms, meat, cheese, onions or some combination of the above. 
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients:</h3>
+                        <p><br>3 eggs, beaten
+                            <br>1 tsp sunflower oil
+                            <br>1 tsp butter
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>1. Beat the eggs: Use two or three eggs per omelette, depending on how hungry you are. Beat the eggs lightly with a fork.
+                            2. Melt the butter: Use an 8-inch nonstick skillet for a 2-egg omelette, a 9-inch skillet for 3 eggs. Melt the butter over medium-low heat, and keep the temperature low and slow when cooking the eggs so the bottom doesn’t get too brown or overcooked.
+                            3. Add the eggs: Let the eggs sit for a minute, then use a heatproof silicone spatula to gently lift the cooked eggs from the edges of the pan. Tilt the pan to allow the uncooked eggs to flow to the edge of the pan.
+                            4. Fill the omelette: Add the filling—but don’t overstuff the omelette—when the eggs begin to set. Cook for a few more seconds
+                            5. Fold and serve: Fold the omelette in half. Slide it onto a plate with the help of a silicone spatula.
+                        </p>
+                        <h3>Nutrition Information</h3>
+                        <p>One egg omelette calories amount to 74 calories when made plain without onions and other vegetables. This dish contains 0% carbs, 7 g of fat, and 6 g of protein. If you make a masala omelette with 2-3 eggs, it will make up for 12% of the total calorie count (2000 calories) required for an adult.</p>
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/Omelette.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://youtube.com/watch?v=7dV4Qw8qdsA" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "five-meal-detail" id="five-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Ferrero Rocher Milkshake</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Ferrero Rocher is a chocolate and hazelnut confectionery, introduced in 1982 and produced by the Italian company Ferrero. Michele Ferrero is credited as the product's creator.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients</h3>
+                        <p><br>3 cups Vanilla Icecream
+                            <br>1/2 cup Milk
+                            <br>2 tablespoon Nutella
+                            <br>5 Ferreo Rocher balls
+                            <br>Whipped cream
+                            <br>Chocolate syrup
+                        </p>
+                        <h3>Instructions</h3>
+                        <p align="left">Add the ice cream, milk, Nutella and 3 Ferrero Rocher balls to a blender.
+                            Place the lid on the blender. Start on a low speed and gradually increase the speed until the milkshake is blended and creamy. If it is too thick you can add a bit more milk until you have the consistency you prefer.
+                            Taste the milkshake and if you want more chocolate or hazelnut flavour you can add a bit more Nutella or another Ferrero Rocher ball.
+                            Drizzle chocolate sauce on the inside of two tall glasses. Pour the milkshake into the glasses. Top with whipped cream, drizzle with chocolate sauce and top with a Ferrero Rocher ball.
+                        </p>
+                        <h3>Tips</h3>
+                        <p>For thicker milkshake:
+                            The thickness of the milkshake will be determined by how firm the ice cream is and how much milk is added. To make the milkshake thicker, make sure the ice cream is on the firmer side and add a small amount of milk at a time until you have the consistency you are looking for.
+                        </p>
+                        <h3>Nutrition Information</h3>
+                        <p align="left">Calories: 776kcal | Carbohydrates: 78g | Protein: 13g | Fat: 45g | Saturated Fat: 20g | Polyunsaturated Fat: 1g | Monounsaturated Fat: 6g | Cholesterol: 94mg | Sodium: 189mg | Potassium: 561mg | Fiber: 2g | Sugar: 55g | Vitamin A: 933IU | Vitamin C: 1mg | Calcium: 348mg | Iron: 1mg</p>
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/ferrerorocher.jpg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=svVOVW486-8" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+           
+            <div class = "seven-meal-detail" id="seven-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Pancakes</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">A pancake is a flat cake, often thin and round, prepared from a starch-based batter that may contain eggs, milk and butter and cooked on a hot surface such as a griddle or frying pan, often frying with oil or butter. It is a type of batter bread.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingredients</h3>
+                        <p><br>1 ½ cups all-purpose flour
+                            <br>3 ½ teaspoons baking powder
+                            <br>1 tablespoon white sugar
+                            <br>¼ teaspoon salt, or more to taste
+                            <br>1 ¼ cups milk
+                            <br>3 tablespoons butter, melted
+                            <br>1 egg
+                        </p>
+                        <h3>Instructions</h3>
+                        <p align="left">Sift flour, baking powder, sugar, and salt together in a large bowl. Make a well in the center and add milk, melted butter, and egg; mix until smooth.
+                            Heat a lightly oiled griddle or pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake; cook until bubbles form and the edges are dry, about 2 to 3 minutes. Flip and cook until browned on the other side. Repeat with remaining batter.
+                        </p>
+                        <h3>Tips</h3>
+                        <p>Before mixing your batter, always have pancake toppings ready. 
+                            Wet ingredients first, then dry.
+                            Let the batter rest while the griddle heats.
+                        </p>
+                        <h3>Nutrition Information</h3>
+                        <p><br>Calories: 430.8
+                            <br>Fat: 18.77g
+                            <br>Sodium: 693.9mg
+                            <br>Carbohydrates: 55.9g
+                            <br>Fiber: .75g
+                            <br>Sugars: 8.6g
+                            <br>Protein: 8.64g</p>
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/pancakes.jpg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=NCMKedZvnyI" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            
+            <!--Ending of Recipe Details-->
+
+        </div>
+
+<!--Script for Javascript-->
+<script src="./assets/bf1.js"></script>
+</body>
+</html>

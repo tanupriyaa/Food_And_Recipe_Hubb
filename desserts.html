@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Desserts</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="./img/logo1.png" class="brand-name">
+            <a href="#" class="bg">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Meals
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="breakfast.html">Breakfast</a>
+                          <a href="lunch.html">Lunch</a>
+                          <a href="dinner.html">Dinner</a>
+                          <a href="desserts.html">Desserts</a>
+                        </div>
+                      </div></li>
+                      <li><div class="dropdown">
+                        <button class="dropbtn">Occassions
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="ganesh.html">Ganesh Chaturthi</a>
+                          <a href="dasara.html">Dussehra</a>
+                          <a href="diwali.html">Diwali</a>
+                          <a href="ramzan.html">Ramzan</a>
+                          <a href="christmas.html">Christmas</a>
+                          <a href="sankranti.html">Makar Sankranti</a>
+                        </div>
+                      </div></li>
+                      
+                      </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form id="form" role="search">
+                          <input
+                            type="search"
+                            id="query"
+                            name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content"
+                          />
+                          <button style="width: 10px">&#8981;</button>
+                        </form>
+                        <script>
+                          const f = document.getElementById("form");
+                          const q = document.getElementById("query");
+                          const google = "https://www.allrecipes.com/";
+                          const site = "";
+        
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + "+" + q.value;
+                            const win = window.open(url, "_blank");
+                            win.focus();
+                          }
+        
+                          f.addEventListener("submit", submitted);
+                        </script>
+                </ul>
+            </div>
+        </nav>
+    <div class="headerdes">
+    <div class="card-grid" >
+        <div class="food-list" id="food-list">
+                
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/gulab-jamun.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Gulab Jamun</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get2ndRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/ferrerorocher.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Ferrero Rocher Milkshake </h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get5thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                
+             
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/jalebi.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3>Jalebi</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get9thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                
+        </div> 
+        <div class = "second-meal-detail" id="second-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Gulab Jamun</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">A popular Indian dessert based on two flavors – gulab (which means rose) and jamun (which refers to purple jamun berries, similar to blueberries).</p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1/2 tin Nestle MILKMAID
+                        <br>2 cups (200 gm) Flour
+                        <br>600 gms Grated Paneer
+                        <br>200 gm Sooji/Rava
+                        <br>1 1/2 tablespoon Baking Powder
+                        <br>1 1/2 tablespoon Baking Soda
+                        <br>For Frying Oil
+                        <br>2 litres Water
+                        <br>1 kg Sugar
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left"> Boil sugar and water to prepare syrup remove from fire. Add cardamom and keep aside to cool.
+                        In a mixing bowl put the flour, paneer, sooji, Nestlé MILKMAID, baking powder and baking soda. Mix gently to make a soft dough. Do not knead too much.
+                        Divide the mixture into 30-35 portions and gently roll into round gulab jamuns. Fry in the oil at very low flame till golden brown in color.
+                        Keep putting the fried gulab jamuns in the prepared sugar syrup. Once all the gulab jamuns are in the sugar syrup bring it to a boil and remove from flame.
+                        Serve warm
+                        </p>
+                    <h3>Tips</h3>
+                    <p align="left">If the oil is not hot enough, jamuns will soak up lots of oil and turn soggy. They will also not hold the shape well and may form a crusty layer over the gulab jamuns later.
+                        If the oil is too hot, the dough will get dispersed in the oil or the jamuns will get plenty of cracks or may get blistered. Also they will get browned quickly without cooking inside. There will be a hard center even after soaking since the dough has remained uncooked.
+                        Once the oil is hot, regulate the flame to medium. Drop the balls one after the other slowly. Do not add a lot of them and crowd the pan as they need enough space to fry and become big while frying. Do not disturb them until they firm up and cook a bit.
+                        Once you see the jamuns are turning firm, then reduce the flame to low and fry gently stirring them until evenly golden.
+                    <h3>Nutrition Information</h3>
+                    <p>One Gulab jamun (25 grams) contains around 175 calories.
+                        Out of which carbohydrates comprise 140 calories, proteins account for 10 calories and remaining calories come from fat which is 25 calories</p>
+                    </div>
+                <div class = "meal-img">
+                    <img src = "./img/gulabjamun.webp" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=P7yIFSqu-5U" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div>  
+        <div class = "five-meal-detail" id="five-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Ferrero Rocher Milkshake</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Ferrero Rocher is a chocolate and hazelnut confectionery, introduced in 1982 and produced by the Italian company Ferrero. Michele Ferrero is credited as the product's creator.
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>3 cups Vanilla Icecream
+                        <br>1/2 cup Milk
+                        <br>2 tablespoon Nutella
+                        <br>5 Ferreo Rocher balls
+                        <br>Whipped cream
+                        <br>Chocolate syrup
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">Add the ice cream, milk, Nutella and 3 Ferrero Rocher balls to a blender.
+                        Place the lid on the blender. Start on a low speed and gradually increase the speed until the milkshake is blended and creamy. If it is too thick you can add a bit more milk until you have the consistency you prefer.
+                        Taste the milkshake and if you want more chocolate or hazelnut flavour you can add a bit more Nutella or another Ferrero Rocher ball.
+                        Drizzle chocolate sauce on the inside of two tall glasses. Pour the milkshake into the glasses. Top with whipped cream, drizzle with chocolate sauce and top with a Ferrero Rocher ball.
+                    </p>
+                    <h3>Tips</h3>
+                    <p>For thicker milkshake:
+                        The thickness of the milkshake will be determined by how firm the ice cream is and how much milk is added. To make the milkshake thicker, make sure the ice cream is on the firmer side and add a small amount of milk at a time until you have the consistency you are looking for.
+                    </p>
+                    <h3>Nutrition Information</h3>
+                    <p align="left">Calories: 776kcal | Carbohydrates: 78g | Protein: 13g | Fat: 45g | Saturated Fat: 20g | Polyunsaturated Fat: 1g | Monounsaturated Fat: 6g | Cholesterol: 94mg | Sodium: 189mg | Potassium: 561mg | Fiber: 2g | Sugar: 55g | Vitamin A: 933IU | Vitamin C: 1mg | Calcium: 348mg | Iron: 1mg</p>
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/ferrerorocher.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=svVOVW486-8" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div> 
+        <div class = "nine-meal-detail" id="nine-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Jalebi</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Jalebi is a popular sweet snack in South Asia, Middle East, Africa, and Mauritius. It goes by many names, including jilapi, zelepi, jilebi, jilipi, zulbia, jerry, mushabak, z’labia, zengoula or zalabia. 
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p> <br>3 cup all purpose flour
+                        <br>2 cup hung curd
+                        <br>1/2 cup ghee
+                        <br>3 cup sugar
+                        <br>5 strand saffron
+                        <br>1/2 teaspoon powdered green cardamom
+                        <br>1/2 cup corn flour
+                        <br>1 1/2 pinch baking soda
+                        <br>2 cup sunflower oil
+                        <br>3 cup water
+                        <br>4 drops rose essence
+                        <br>1/2 teaspoon edible food color
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left"> <br>Step 1: Prepare the Jalebi batter and let it ferment overnight
+                        To make this easy Jalebi recipe, mix together all-purpose flour, cornflour and baking soda in a bowl. Now, add ghee and food colour to the above mixture and give a mix. To make a thick batter add hung curd and water. Mix well until it is thick but has a slightly flowing consistency. Keep it aside for 8-10 hours to ferment. This step is important to give that unique "khatta" taste to Jalebi. To make the sugar syrup, heat water in a pan over medium flame. Add sugar and mix until fully dissolved. Simmer the syrup until it attains one-string consistency. Add saffron, cardamom powder and rose essence. Stir well to prepare the final sugar syrup. This will be used to soak the jalebis and give them their signature sweetness.
+                        <br>Step 2: Deep fry the Jalebis
+                        Now, heat oil in a pan over medium flame for deep frying. Fill the jalebi batter in a muslin cloth and pierce a small hole in the cloth. You can even use a squeezy bottle (ketchup bottles with a small nozzle on top) to make jalebis. Now just squeeze the muslin cloth to make concentric circles. Move from inside to outside to make perfect circles. Fry till jalebis from both the sides until they are crispy in texture and golden in colour.
+                        <br>Step 3: Soak the Jalebis in sugar syrup and serve
+                        Soak the jalebis in sugar syrup for 3-4 minutes in warm sugar syrup. Ensure that the sugar syrup is warm and not very hot, as this will make the jalebis limp. Don't soak the jalebis for too long if you wish to retain their crispiness. Now, remove the jalebis from the syrup and place it on a tray lined with butter paper or foil. Decorate with silver foil (optional) and serve the jalebis hot, warm or at room temperature with creamy Rabri. Note: To make the jalebi even more delicious, add a little bit of ghee to the batter, this will give your jalebi that perfect aroma. To the crispy Jalebi, don't forget to ferment the batter overnight.
+                    </p>
+            
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/jalebi.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=pdFm9Rnz4H8" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+    
+    <!--Script for Javascript-->
+    <script src="./assets/ds1.js"></script>
+</body>
+</html>

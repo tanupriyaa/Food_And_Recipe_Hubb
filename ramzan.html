@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Diwali</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="./img/logo1.png" class="brand-name">
+            <a href="#" class="bg">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Meals
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="breakfast.html">Breakfast</a>
+                          <a href="lunch.html">Lunch</a>
+                          <a href="dinner.html">Dinner</a>
+                          <a href="desserts.html">Desserts</a>
+                        </div>
+                      </div></li>
+                      <li><div class="dropdown">
+                        <button class="dropbtn">Occassions
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="ganesh.html">Ganesh Chaturthi</a>
+                          <a href="dasara.html">Dussehra</a>
+                          <a href="diwali.html">Diwali</a>
+                          <a href="ramzan.html">Ramzan</a>
+                          <a href="christmas.html">Christmas</a>
+                          <a href="sankranti.html">Makar Sankranti</a>
+                        </div>
+                      </div></li>
+                      
+                      </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form id="form" role="search">
+                          <input
+                            type="search"
+                            id="query"
+                            name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content"
+                          />
+                          <button style="width: 10px">&#8981;</button>
+                        </form>
+                        <script>
+                          const f = document.getElementById("form");
+                          const q = document.getElementById("query");
+                          const google = "https://www.allrecipes.com/";
+                          const site = "";
+        
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + "+" + q.value;
+                            const win = window.open(url, "_blank");
+                            win.focus();
+                          }
+        
+                          f.addEventListener("submit", submitted);
+                        </script>
+                </ul>
+            </div>
+        </nav>
+    <div class="headerramzan">
+    <div class="card-grid" >
+        <div class="food-list" id="food-list">
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/Haleem.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Haleem </h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get23rdRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+               
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/chickenshawarma.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Chicken Shawarma</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get24thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/sheerkhurma.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Sheer Khurma</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get25thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+        </div> 
+        <div class = "twenty3-meal-detail" id="twenty3-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Haleem</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about"> Haleem is a rich and delectable mutton stew, popular in the Middle East and Asia. As common as it is in India, particularly in the city Hyderabad, it is surprising to know that Haleem actually has originated from Persia. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1/2 tsp lamb (boneless)
+                        <br>150 gms moong dal (washed)
+                        <br>50 gms dal chana
+                        <br>100 gms wheat (broken)
+                        <br>500 ml desi ghee
+                        <br>10 Cloves
+                        <br>4  Bay leaves
+                        <br>1 gm saffron
+                        <br>30 gms green chilly paste
+                        <br>10 gms turmeric powder
+                        <br>6 gms mace
+                        <br>10 gms green cardamom
+                        <br>50 gms garlic paste
+                        <br>50 gms ginger, grated
+                        <br>150 gms onion, fried
+                        <br>3-4 litre lamb stock
+                        <br>to taste salt
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">
+                        Wash and soak all the lentils and broken wheat together for 2 hours.2.Take a heavy bottom handi and add ghee to temper it with whole spices - cloves, bay leaf and green cardamom. When the spices start crackling, add the grated ginger and garlic paste till the colour turns brown.3.Add the lamb along with all the powdered spices saffron, green chilli paste, turmeric powder and cook until it is half done and then add fried onions.4.Drain the water from the lentils and add it to the lamb along with lamb stock. Add salt at this stage.5.Let it cook until lamb gets tender and mixes with the lentils and becomes thick in consistency.6.Check for the seasoning and serve with the choice of breads
+                    </p>
+            
+                    <h3>Tips</h3>
+                    <p align="left">You can pair Haleem with breads like Baqarkhani or you can have it alone as it is a whole meal in itself.</p>
+                   
+                    </div>
+                <div class = "meal-img">
+                    <img src = "./img/Haleem.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=4yhFuCQTn7Y" class="meal-link-btn">Watch Video</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "twenty4-meal-detail" id="twenty4-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Chicken Shawarma</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about"> 
+                        Shawarma is vastly popular across the middle-east, specially Lebanon. Now, a popular street food as well, chicken shawarma has quickly garnered appreciation across the globe, particularly in India.    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p>
+                        <br>boneless, skinless chicken breast(910 g)
+                        <br>1/2 cup Malt Vinegar
+                        <br>1/4 cup Plain yogurt
+                        <br>1 tbsp vegetable oil
+                        <br>to taste salt and pepper
+                        <br>1/4 tsp freshly ground cardamon 
+                        <br>1 tsp All spice powder
+                        <br>1/2 cup Tahini
+                        <br>1/4 cup Plain yogurt
+                        <br>1/2 tsp Garlic
+                        <br>2 tbsp Lemon Juice
+                        <br>1 tbsp Olive oil
+                        <br>1 tbsp Fresh parsley, chopped
+                        <br>to taste salt and pepper
+                        <br>4 medium tomatoes, sliced
+                        <br>1/2 cup onion, sliced
+                        <br>4 cup lettuce, shredded
+                        <br>8 Pita bread rounds
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left"><br>1. In a glass baking dish, mix together the malt vinegar, 1/4 cup yogurt, vegetable oil, mixed spice, cardamom, salt and pepper.2.Place the chicken thighs into the mixture and turn to coat. Cover and marinate in the refrigerator for at least 4 hours or overnight.3.Preheat the oven to 350 degrees F (175 degrees C).4.In a small bowl, mix together the tahini, 1/4 cup yogurt, garlic, lemon juice, olive oil, and parsley.5.Season with salt and pepper, taste, and adjust flavors if desired. Cover and refrigerate.6.Cover the chicken and bake in the marinade for 30 minutes, turning once.7.Uncover, and cook for an additional 5 to 10 minutes, or until chicken is browned and cooked through.8.Remove from the dish, and cut into slices.9.Place sliced chicken, tomato, onion, and lettuce onto pita breads.10.Roll up, and top with tahini sauce.
+                        </p>
+                    <h3>Tips</h3>
+                    <p align="left"> You can also serve Shawarma with Mayonnaise sauce.</p>
+                    <h3>Nutrition Information</h3>
+                    <p>Calories 528
+                        <br>Fat 17g
+                        <br>Carbohydrates 17g
+                        <br>Fiber 3g
+                        <br>Sugar 3.4g
+                        <br>Protein 45g</p>
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/chickenshawarma.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=lx-ZAmC3j4M" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div>  
+        <div class = "twenty5-meal-detail" id="twenty5-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Sheer Khurma</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about"> Sheer khurma is a rich creamy pudding made with vermicelli, milk, dates, nuts, dry fruits, sugar and ghee. 'Sheer' means milk and 'khurma' refers to dates in Persian language. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1 cup vermicelli (seviyan)
+                        <br>3 tablespoons Ghee (clarified butter)
+                        <br>30 pistachios (unsalted) 
+                        <br>20 almonds 
+                        <br>16 to 18 cashews 
+                        <br>2 tablespoons golden raisins
+                        <br>4 dates large or 8 small to medium-sized 
+                        <br>2 tablespoons chironji 
+                        <br>1 litre whole milk
+                        <br>4 tablespoons sugar
+                        <br>1 teaspoon cardamom powder
+                        <br>1 tablespoon rose water 
+                        <br>15 to 18 saffron strands
+                        <br>50 gms ginger, grated
+                        <br>150 gms onion, fried
+                        <br>3-4 litre lamb stock
+                        <br>to taste salt
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">
+                        
+                        In a wok (kadai), frying pan or skillet, dry roast the vermicelli stirring often on a low heat until golden and set aside. If you want then you can roast the vermicelli in ghee also.
+                        In the same pan, heat ghee and add chopped dry fruits, dates, nuts and sauté for 3 to 4 minutes stirring often on a low heat.
+                        
+                        Heat milk in a heavy saucepan or pot or kadai (wok) on medium-low to medium heat. Let the milk come to a boil. Stir a few times while the milk heats and comes to a boil.
+                        
+                        Lower the heat and simmer for 8 to 10 minutes until the milk slightly thickens. Stir often while the milk reduces and thickens.
+                        Add the roasted vermicelli and sugar to the milk. Mix well to combine.
+                        Simmer on low to medium-low heat until vermicelli are cooked and have softened. This will take about 8 to 10 minutes on a low heat.
+                        The milk will also thicken and reduce in volume.
+                        Add the cardamom powder and saffron strands.
+                        Also add the entire sauteed dry fruits, nuts and ghee mixture to the milk.
+                        Switch off the heat and mix well.
+                        Check the taste and add more sugar if required.
+                        
+                        Finally add rose water and give a stir.
+                        Serve the sheer khurma hot, warm or chilled.
+                        You can also garnish sheer khurma with saffron strands or rose petals or slivered nuts.
+                        
+                        Store any leftovers in a covered bowl or container in the fridge for a couple of days.
+                        Sheer Khurma will thicken as it cools. So keep this is mind and cook it to your preferred consistency.
+                        Make a large batch of this recipe easily to feed a crowd. </p>
+            
+                    <h3>Tips</h3>
+                    <p align="left">Vermicelli:  Use the thin, long and fine whole wheat vermicelli. These have long strands, so you need to break them before roasting.
+                        Nuts & Dry Fruits: If you are allergic to some nuts, you can easily skip them. You can even add your favorite nuts and dried fruits. 
+                        Dates: Use any good quality dates. If there are seeds in the dates, then chop them and discard the seeds. Dry dates (known as kharik) can also be added. If using dry dates, then soak them in water for a few hours until they soften. Chop and remove the seeds. Then add them when the vermicelli has softened.</p>
+                   
+                        <h3>Nutrition Information</h3>
+                        <p>Calories 440
+                            <br>Fat 20g
+                            <br>Carbohydrates 59g
+                            <br>Fiber 227g
+                            <br>Sugar 18g
+                            <br>Protein 11g</p>
+                    </div>
+                <div class = "meal-img">
+                    <img src = "./img/sheerkhurma.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=ncJzja-ZU7U" class="meal-link-btn">Watch Video</a>
+                </div>
+            </div>
+        </div>
+        </div>
+         <!--Script for Javascript-->
+    <script src="./assets/rjs.js"></script>
+</body>
+</html>

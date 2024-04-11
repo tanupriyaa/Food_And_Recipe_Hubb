@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Christmas</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="./img/logo1.png" class="brand-name">
+            <a href="#" class="bg">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Meals
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="breakfast.html">Breakfast</a>
+                          <a href="lunch.html">Lunch</a>
+                          <a href="dinner.html">Dinner</a>
+                          <a href="desserts.html">Desserts</a>
+                        </div>
+                      </div></li>
+                      <li><div class="dropdown">
+                        <button class="dropbtn">Occassions
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="ganesh.html">Ganesh Chaturthi</a>
+                          <a href="dasara.html">Dussehra</a>
+                          <a href="diwali.html">Diwali</a>
+                          <a href="ramzan.html">Ramzan</a>
+                          <a href="christmas.html">Christmas</a>
+                          <a href="sankranti.html">Makar Sankranti</a>
+                        </div>
+                      </div></li>
+                      
+                      </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form id="form" role="search">
+                          <input
+                            type="search"
+                            id="query"
+                            name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content"
+                          />
+                          <button style="width: 10px">&#8981;</button>
+                        </form>
+                        <script>
+                          const f = document.getElementById("form");
+                          const q = document.getElementById("query");
+                          const google = "https://www.allrecipes.com/";
+                          const site = "";
+        
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + "+" + q.value;
+                            const win = window.open(url, "_blank");
+                            win.focus();
+                          }
+        
+                          f.addEventListener("submit", submitted);
+                        </script>
+                </ul>
+            </div>
+        </nav>
+    <div class="heade'rchristmas">
+    <div class="card-grid" >
+        <div class="food-list" id="food-list">
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/cake.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Christmas Cake</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get20thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+               
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/samosa.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Chocolate chip cookie</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get21stRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/kulfi.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Cherry Lemonade</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get22ndRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                
+        </div> 
+        <div class = "twenty-meal-detail" id="twenty-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Christmas cake</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Christmas cake is a type of cake, often fruitcake, served at Christmas time in many countries. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>300g / 10 oz raisins
+                        <br>150g / 5 oz diced dried apricots , chopped 8 mm / 1/3"
+                        <br>75g / 2.5 oz mixed peel , diced 5mm / 1/5
+                        <br>150g / 5 oz glace cherries , chopped 8 mm / 1/3"
+                        <br>180g / 6 oz dates , diced 5mm / 1/5"
+                        <br>1 cup + 2 tbsp apple juice, OR 1/3 brandy + 2/3 juice (Note 2)
+                        <br>115g / 8 tbsp unsalted butter , softened (1 US stick)
+                        <br>1 1/2 cups dark brown sugar , packed (Note 3)
+                        <br>1/2 cup vegetable oil (or canola, peanut, grapeseed)
+                        <br>3 tbsp molasses or golden syrup (Note 4)
+                        <br>1/2 tsp salt
+                        <br>1/2 tsp all spice
+                        <br>1/2 tsp cinnamon
+                        <br>1/2 tsp nutmeg
+                        <br>3 eggs
+                        <br>1/2 tsp baking powder
+                        <br>1 2/3 cups plain flour (all purpose flour)
+                        <br>3/4 cup walnuts , chopped (optional)
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">
+                        Place dried fruit and juice/brandy in a large microwavable container. Microwave 1 1/2 minutes on high or until hot.
+Stir to coat all fruit in liquid. Cover then set aside for 1 hour (to plump up/soak and cool).
+Preheat oven to 160°C / 320°F (140°C fan). Grease and line a 21 - 22 cm / 8 - 9" round cake pan with baking paper (parchment paper) (7 cm / 2.75" tall).
+Using an electric beater, beat butter and sugar until smooth and creamy (about 1 minute on speed 5).
+Add oil and molasses, beat until combined.
+Add salt, spices and baking powder - beat until incorporated.
+Add eggs, one at a time, beating until just incorporated
+Stir in the flour.
+When mostly incorporated, stir in the fruit mix (including all the extra liquid in bowl) and walnuts (if using).
+Pour into cake pan, cover with foil and bake for 3 hours 15 minutes, removing foil the last 45 minutes. Skewer inserted into middle should come out clean with no batter on it.
+Remove from oven and cool for 20 minutes before transferring to cooling rack. Cool completely before serving.
+Cake is moist and so full flavoured, it can be eaten plain. But see below for decorating and serving ideas (traditionally served with pouring custard).
+Cutting: Either cut into thin wedges, or cut cake into thin strips (2cm / 0.75" or so), then cut those strips into serving size pieces.
+CHRISTMAS CAKE DECORATING OPTIONS:
+Traditional White Christmas Cake (pictured in post) - Marzipan and fondant, see Decorating Note.
+Simple - pile top with fresh cherries or other fruit, dust with icing sugar (powdered sugar). Wrap a ribbon around the cake for extra touch!
+Drippy white glaze - use the glaze in this Lemon Cake recipe, but leave out the lemon juice (ie make a plain sweet white glaze). Flip cake upside down for flat surface then glaze per that recipe.
+Serving - serve with custard for a traditional experience! Either homemade custard or store bought pouring custard (jazz it up by mixing in vanilla seed paste!).
+                    </p>
+        <h3>Tips</h3>
+        <p>store bought mix of pre chopped dried fruit is fine to use. Chopping your own will yield a more moist cake (pre chopped dried fruit is not as moist) BUT having said that, this cake is so ultra moist, it has the give to use pre chopped!</p>
+                    <h3>Nutrition Information</h3>
+                    <p>
+                        <br>Calories:388cal (19%)
+                        <br>Carbohydrates:64g (21%)
+                        <br>Protein:4g (8%)
+                        <br>Fat:15g (23%)
+                    </p>
+                    </div>
+                <div class = "meal-img">
+                    <img src = "./img/cake.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=34yeL8TstO0" class="meal-link-btn">Watch Video</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "twenty1-meal-detail" id="twenty1-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Chocolate Chip Cookies</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">A chocolate chip cookie is a drop cookie that features chocolate chips or chocolate morsels as its distinguishing ingredient.</p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>3 cups (380 grams) all-purpose flour
+                        <br>1 teaspoon baking soda
+                        <br>1 teaspoon fine sea salt
+                        <br>2 sticks (227 grams) unsalted butter, at cool room temperature (67°F)
+                        <br>1/2 cup (100 grams) granulated sugar
+                        <br>1 1/4 cups (247 grams) lightly packed light brown sugar
+                        <br>2 teaspoons vanilla
+                        <br>2 large eggs, at room temperature
+                        <br>2 cups (340 grams) semisweet chocolate chips
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left"><br>Preheat oven to 350ºF. Line baking sheets with parchment paper.
+                        In a medium bowl, combine the flour, baking soda, and salt.
+                        
+                        In the bowl of an electric mixer, beat the butter, granulated sugar, and brown sugar until creamy, about 2 minutes. Add the vanilla and eggs. Gradually beat in the flour mixture. Stir in the chocolate chips.
+                        
+                        If time permits, wrap dough in plastic wrap and refrigerate for at least 24 hours but no more than 72 hours. This allows the dough to “marinate” and makes the cookies thicker, chewier, and more flavorful. Let dough sit at room temperature just until it is soft enough to scoop.
+                        
+                        Divide the dough into 3-tablespoon sized balls using a large cookie scoop and drop onto prepared baking sheets.
+                        Bake for 11-13 minutes, or until golden brown. Cool for 5 minutes before removing to wire racks to cool completely.
+                    Enjoy!    
+                    </p>
+                    <h3>Nutrition Information</h3>
+                    <p>Calories 157
+                        <br>Fat 3g
+                        <br>Carbs 7g
+                        <br>Protein 3g</p>
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/cookies.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=PFJAuAWxuvI" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div>  
+        <div class = "twenty2-meal-detail" id="twenty2-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Cherry Lemonade</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Cool and refreshing Cherry Lemonade is made with all natural ingredients like freshly squeezed lemons, sun-ripened sour cherries, sugar, and filtered water. With just the right balance of cherry flavor and sweetness, this is the ultimate summer liquid refreshment. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>3 cups fresh sweet cherries, pitted
+                        <br>3/4 cup fresh lemon juice
+                        <br>3/4 cup sugar
+                        <br>6 cups sparkling or still water
+                        <br>lemon slices, to garnish
+                        <br>fresh cherries, to garnish
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left"><br>In a blender, add the cherries, lemon juice, and sugar. Blend until smooth and then run the cherry syrup through a mesh strainer. You can store this syrup in the fridge until ready to use.
+
+                        Fill a glass halfway with ice. To the glass, add 3 tablespoons of cherry syrup. Top with sparkling or still water and stir. Garnish with lemon slices and fresh cherries.
+                        </p>
+                        <h3>Tips</h3>
+                        <p>If you are making this with still water, you can make a whole pitcher and store it in the fridge. If you are using sparkling water, its best to make it by glass so that the sparkling water does not go flat.</p>
+                    <h3>Nutrition Information</h3>
+                    <p><br>Calories: 147kcal
+                        <br>Carbohydrates: 38g
+                        <br>Protein: 1g
+                        <br>Fat: 1g
+                        <br>Saturated Fat: 1g
+                        <br>Polyunsaturated Fat: 1g
+                        <br>Monounsaturated Fat: 1g
+                        <br>Sodium: 50mg
+                        <br>Potassium: 190mg
+                        <br>Fiber: 2g
+                        <br>Sugar: 35g
+                        <br>Vitamin A: 46IU
+                        <br>Vitamin C: 17mg
+                        <br>Calcium: 23mg
+                        <br>Iron: 1mg
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/cherrylemonade.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=Ka6WBhWaqqA" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div>  
+    </div>
+         <!--Script for Javascript-->
+    <script src="./assets/cjs.js"></script>
+</body>
+</html>

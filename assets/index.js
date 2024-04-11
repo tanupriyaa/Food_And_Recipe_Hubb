@@ -1,5 +1,5 @@
 //Variables for Hamburger Button 
-const hamburger = document.getElementsByClassName('hamburger')[0]
+const hamburger = document.getElementsByClassName('bg')[0]
 const menubar = document.getElementsByClassName('menu-bar')[0]
 
 //Adding Event Listener for my button and menubar for a tablet and Phone view
@@ -163,10 +163,84 @@ function get10thRecipe(){
 function get11thRecipe(){
   document.querySelector(".eleven-meal-detail").style.display = "block"
 }
-
-
-
-
+function get12thRecipe(){
+  document.querySelector(".twelth-meal-detail").style.display = "block"
+}
+function get13thRecipe(){
+  document.querySelector(".thirteen-meal-detail").style.display = "block"
+}
+function get14thRecipe(){
+  document.querySelector(".fourteen-meal-detail").style.display = "block"
+}
+function get15thRecipe(){
+  document.querySelector(".fifteen-meal-detail").style.display = "block"
+}
+function get16thRecipe(){
+  document.querySelector(".sixteen-meal-detail").style.display = "block"
+}
+function get17thRecipe(){
+  document.querySelector(".seventeen-meal-detail").style.display = "block"
+}
+function get18thRecipe(){
+  document.querySelector(".eighteen-meal-detail").style.display = "block"
+}
+function get19thRecipe(){
+  document.querySelector(".nineteen-meal-detail").style.display = "block"
+}
+function get20thRecipe(){
+  document.querySelector(".twenty-meal-detail").style.display = "block"
+}
+function get21stRecipe(){
+  document.querySelector(".twenty1-meal-detail").style.display = "block"
+}
+function get22ndRecipe(){
+    document.querySelector(".twenty2-meal-detail").style.display = "block"
+}
+function get23rdRecipe(){
+  document.querySelector(".twenty3-meal-detail").style.display = "block"
+}
+function get24thRecipe(){
+  document.querySelector(".twenty3-meal-detail").style.display = "block"
+}
+function get25thRecipe(){
+    document.querySelector(".twenty5-meal-detail").style.display = "block"
+}
+function get26thRecipe(){
+  document.querySelector(".twenty6-meal-detail").style.display = "block"
+}
+function get27thRecipe(){
+  document.querySelector(".twenty7-meal-detail").style.display = "block"
+}
+function get28thRecipe(){
+  document.querySelector(".twenty8-meal-detail").style.display = "block"
+}
+function get29thRecipe(){
+  document.querySelector(".twenty9-meal-detail").style.display = "block"
+}
+function getnews1(){
+  document.querySelector(".news1-meal-detail").style.display = "block"
+}
+function getnews2(){
+  document.querySelector(".news2-meal-detail").style.display = "block"
+}
+function getnews3(){
+  document.querySelector(".news3-meal-detail").style.display = "block"
+}
+function getnews4(){
+  document.querySelector(".news4-meal-detail").style.display = "block"
+}
+function getnews5(){
+  document.querySelector(".news5-meal-detail").style.display = "block"
+}
+function getnews6(){
+  document.querySelector(".news6-meal-detail").style.display = "block"
+}
+function getnews7(){
+  document.querySelector(".news7-meal-detail").style.display = "block"
+}
+function getnews8(){
+  document.querySelector(".news8-meal-detail").style.display = "block"
+}
 //the function will close the above functions when the closeBtn is clicked
 function closeBtn(){
   document.querySelector(".meal-detail").style.display = "none"
@@ -180,5 +254,31 @@ function closeBtn(){
   document.querySelector(".nine-meal-detail").style.display ="none"
   document.querySelector(".ten-meal-detail").style.display ="none"
   document.querySelector(".eleven-meal-detail").style.display ="none"
+  document.querySelector(".twelth-meal-detail").style.display ="none"
+  document.querySelector(".thirteen-meal-detail").style.display ="none"
+  document.querySelector(".fourteen-meal-detail").style.display ="none"
+  document.querySelector(".fifteen-meal-detail").style.display ="none"
+  document.querySelector(".sixteen-meal-detail").style.display ="none"
+  document.querySelector(".seventeen-meal-detail").style.display ="none"
+  document.querySelector(".eighteen-meal-detail").style.display ="none"
+  document.querySelector(".nineteen-meal-detail").style.display ="none"
+  document.querySelector(".twenty-meal-detail").style.display ="none"
+  document.querySelector(".twenty1-meal-detail").style.display ="none"
+  document.querySelector(".twenty2-meal-detail").style.display ="none"
+  document.querySelector(".twenty3-meal-detail").style.display ="none"
+  document.querySelector(".twenty4-meal-detail").style.display ="none"
+  document.querySelector(".twenty5-meal-detail").style.display ="none"
+  document.querySelector(".twenty6-meal-detail").style.display ="none"
+  document.querySelector(".twenty7-meal-detail").style.display ="none"
+  document.querySelector(".twenty8-meal-detail").style.display ="none"
+  document.querySelector(".twenty9-meal-detail").style.display ="none"
+  document.querySelector(".news1-meal-detail").style.display ="none"
+  document.querySelector(".news2-meal-detail").style.display ="none"
+  document.querySelector(".news3-meal-detail").style.display ="none"
+  document.querySelector(".news4-meal-detail").style.display ="none"
+  document.querySelector(".news5-meal-detail").style.display ="none"
+  document.querySelector(".news6-meal-detail").style.display ="none"
+  document.querySelector(".news7-meal-detail").style.display ="none"
+  document.querySelector(".news8-meal-detail").style.display ="none"
 }
 

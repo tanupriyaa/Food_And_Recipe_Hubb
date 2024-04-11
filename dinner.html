@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Dinner</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="./img/logo1.png" class="brand-name">
+            <a href="#" class="bg">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Meals
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="breakfast.html">Breakfast</a>
+                          <a href="lunch.html">Lunch</a>
+                          <a href="dinner.html">Dinner</a>
+                          <a href="desserts.html">Desserts</a>
+                        </div>
+                      </div></li>
+                      <li><div class="dropdown">
+                        <button class="dropbtn">Occassions
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="ganesh.html">Ganesh Chaturthi</a>
+                          <a href="dasara.html">Dussehra</a>
+                          <a href="diwali.html">Diwali</a>
+                          <a href="ramzan.html">Ramzan</a>
+                          <a href="christmas.html">Christmas</a>
+                          <a href="sankranti.html">Makar Sankranti</a>
+                        </div>
+                      </div></li>
+                      
+                      </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form id="form" role="search">
+                          <input
+                            type="search"
+                            id="query"
+                            name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content"
+                          />
+                          <button style="width: 10px">&#8981;</button>
+                        </form>
+                        <script>
+                          const f = document.getElementById("form");
+                          const q = document.getElementById("query");
+                          const google = "https://www.allrecipes.com/";
+                          const site = "";
+        
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + "+" + q.value;
+                            const win = window.open(url, "_blank");
+                            win.focus();
+                          }
+        
+                          f.addEventListener("submit", submitted);
+                        </script>
+                </ul>
+            </div>
+        </nav>
+    <div class="headerdin">
+    <div class="card-grid" >
+        <div class="food-list" id="food-list">
+                
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/greenpeasmasala.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Green Pead Masala</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get6thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/baingan.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3>Baingan ka Bharta</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get8thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+             
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/paneer butter masala.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3>Paneer Butter Masala</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get11thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+        </div> 
+        <div class = "six-meal-detail" id="six-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Green Peas Masala</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Green peas masala is a tomato based gravy with spice powders and simply butter. A tasty curry that goes well with rice or roti, best side dish for chapati, poori.
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1 & ¼ cups Green peas fresh or frozen
+                        <br>3 Onion small
+                        <br>5 Tomato small
+                        <br>1 & ½ teaspoon Ginger garlic paste
+                        <br>¼ teaspoon Fenugreek seeds or 1 tablespoon kasoori methi
+                        <br>¼ teaspoon Cumin seeds
+                        <br>2 teaspoon Red chilli powder Kashmiri or mild spice
+                        <br>2 teaspoon Coriander seeds powder
+                        <br>½ teaspoon Garam masala powder
+                        <br>2 tablespoon Coriander leaves chopped
+                        <br>¼ teaspoon Sugar
+                        <br>1 tablespoon Butter
+                        <br>1 tablespoon Oil
+                        <br>Salt
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">Golden roast firstly fenugreek seeds and cumin seeds in few drops of oil in a pan.
+                        Powder it using hand mortar and pestle or you can simply crush it using a rolling pin.
+                        Add 1 tablespoon oil in a pressure cooker, add ginger, garlic firstly. Followed by cubed onion.
+                        Saute until translucent. Then add cubed tomato.
+                        Fry them until the the tomatoes turn mushy.
+                        Cool and grind.
+                        Meanwhile, heat the pressure cooker with 2 tablespoon oil and temper with the items given under ‘to temper’ table.
+                        Add the ground onion tomato and add the masala powder, turmeric. Fry till oil separates.
+                        Fry covered as it will splutter a lot, in medium flame until it reduces in volume. Say 5-6 minutes.
+                        Add green peas and enough water (1 & ½ to 2 cups. Sprinkle salt and sugar.
+                        Pressure cook for a whistle in medium flame.
+                        Open once pressure is released naturally and add the powdered cumin and fenugreek (I had methi powder already)
+                        Just give it a boil, garnish with coriander leaves and butter.
+                        
+                    </p>
+                    <h3>Tips</h3>
+                    <p align="left">Better cover the masala while it is frying as it splutters a lot.
+                        You can add ginger garlic paste instead of adding whole garlic, ginger. If adding paste, add after sauteeing onion and fry for 30 seconds.
+                        Instead of adding fenugreek seeds powder, you can add kasoori methi like in my video.
+                        Roasted cumin seeds powder add a nice flavor to the gravy, so try not to skip it. I forgot to add in my updated video but highly recommend.
+                        While sauteeing the masala, make sure to saute until oil oozes. Otherwise curry won't be tasty.</p>
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/greenpeasmasala.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://youtu.be/1iYygZFsfTg" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div> 
+        <div class = "eight-meal-detail" id="eight-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">Baingan Ka Bharta</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Baingan bharta or Baigan Chokha is an Indian dish prepared by mincing grilled eggplant and mixing it with tomato, onion, herbs and spices. Grilling the eggplant over charcoal or direct fire infuses the dish with a smoky flavour.
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>400 grams brinjal / baingan / eggplant
+                        <br> clove garlic
+                        <br> chilli
+                        <br> tsp oil
+                        other ingredients:
+                        <br> tbsp oil
+                        <br> tsp cumin / jeera
+                        <br> dried red chilli, broken
+                        <br> inch ginger, finely chopped
+                        <br> clove garlic, finely chopped
+                        <br> onion, finely chopped
+                        <br> tsp kashmiri red chilli powder
+                        <br> tsp coriander powder
+                        <br> tomato, finely chopped
+                        <br> tsp salt
+                        <br> tsp garam masala
+                        <br> tbsp coriander, finely chopped
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">Firstly, take large-sized brinjal and make 4 slits.
+                        stuff in 3 garlic and 1 chilli in each slit.
+                        grease the baingan with oil as it helps to peel off the skin easily once roasting.
+                        start roasting on gas stove flipping occasionally.
+                        roast until brinjal turns dark and cooked completely from inside.
+                        cool the baingan completely and start to peel the skin off.
+                        take off the head of brinjal and check if the brinjal is cooked completely from inside.
+                        mash the eggplant with the help of a fork. keep aside.
+                        in a large kadai heat 2 tbsp oil and saute 1 tsp cumin, 1 dried red chilli, 1 inch ginger and 2 clove garlic.
+                        saute 1 onion until it shrinks slightly.
+                        further add ½ tsp chilli powder, 1 tsp coriander powder and saute till spices turn aromatic.
+                        add in 1 tomato and saute until tomatoes turn soft and mushy.
+                        now add in roasted and mashed brinjal along with 1 tsp salt.
+                        mix and mash for 5 minutes or until flavours are well combined.
+                        add ½ tsp garam masala and 2 tbsp coriander. mix well.
+                        finally, enjoy baingan ka bartha with hot phulka or rice.
+                    </p>
+                    <h3>Tips</h3>
+                    <p align="left">Firstly, roasting brinjal on low to medium flame helps in uniform cooking and adds flavour.
+                        Also, you can roast tomato along with brinjal.
+                        Additionally, mashing uniformly helps to blend the flavours.
+                        Finally, baingan ka bartha recipe can just be prepared with green chilli or red chilli powder.</p>
+                    <h3>Nutrition Information</h3>
+                    <p> <br>Calories 117.
+                        <br>Total Fat 5.6g 7%
+                        <br>Saturated Fat 0.5g 2%
+                        <br>Trans Fat 0.1g.
+                        <br>Polyunsaturated Fat 3.5g.
+                        <br>Monounsaturated Fat 1.2g.
+                        <br>Cholesterol 0mg 0%
+                        <br>Sodium 356mg 15%</p>
+                    </div>
+                <div class = "meal-img">
+                    <img src = "./img/baingan.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=U-Km4u20cI8" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div> 
+        <div class = "ten-meal-detail" id="ten-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Veg Pulao</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Vegetable Pulao (Veg Pulav) is a spicy rice dish prepared by cooking rice with various vegetables and spices.
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1/2 cup Basmati Rice (long grained rice)
+                        <br>1 medium Onion, finely chopped
+                        <br>1 small Tomato, finely chopped
+                        <br>1/4 cup Green Peas (mutter), fresh or frozen
+                        <br>3 tablespoons finely chopped French Beans
+                        <br>1/4 cup finely chopped Carrot
+                        <br>1 small piece of Bay Leaf
+                        <br>1-inch piece of Cinnamon
+                        <br>2 Cloves
+                        <br>1/4 teaspoon Garam Masala Powder
+                        <br>1/8 teaspoon Turmeric Powder
+                        <br>1/2 teaspoon Red Chilli Powder
+                        <br>2 tablespoons finely chopped Coriander Leaves
+                        <br>2 tablespoons Oil
+                        <br>1 teaspoon Ghee
+                        <br>1 cup Water
+                        <br>Salt to taste
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">
+                        Wash rice and soak it in water for 15-20 minutes. Drain and keep aside until needed.
+                        Heat ghee and oil together in a pressure cooker (2-liter capacity, stainless steel cooker) on low flame. Add bay leaf, cinnamon, clove, and sauté for 30 seconds. Add onion and sauté until it turns light brown or for approx. 2 minutes.
+                        Add chopped tomato, green peas, french beans and carrot. Stir-fry them for approximately 2 minutes.
+                        Add soaked (drained) rice, garam masala powder, turmeric powder, red chilli powder and salt.
+                        Stir-fry them for approximately 2 minutes. Add 1 cup water and mix well.
+                        Close the lid and cook over medium flame for 2 whistles. When 1st whistle is completed, reduce the flame to low and cook until another whistle. Turn off flame.
+                        Let it cool at room temperature until pressure inside cooker comes down naturally. Open the lid carefully and fluff the rice with a fork. Transfer it to a serving bowl and garnish with fresh coriander leaves.
+                    </p>
+                    <h3>Tips</h3>
+                    <p align="left">If you are using pressure cooker made of aluminum then cook it for 2 whistles on medium flame.
+                        You can prepare it in large quantity in larger pressure cooker. Just use rice and water in 1:2 ratios. i.e. for every one cup rice two cups water should be added.
+                        You can also prepare equally delicious mixed vegetable rice pulao in a pan with a lid. Use same amount of ingredients as mentioned in this recipe, cover pan with a lid and cook it on low flame for 8-10 minutes. Do not open the lid in between while cooking. After turning off the flame, open the lid after 7-8 minutes. However, cooking in a pan may require more water as steam will escape easily, hence add 1/4 cup more water for given recipe.
+                    </p>
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/vegpulao.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=UDrJ2T8Ss_Q" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+    
+    <!--Script for Javascript-->
+    <script src="./assets/din1.js"></script>
+</body>
+</html>

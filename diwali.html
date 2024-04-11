@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Diwali</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="./img/logo1.png" class="brand-name">
+            <a href="#" class="bg">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Meals
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="breakfast.html">Breakfast</a>
+                          <a href="lunch.html">Lunch</a>
+                          <a href="dinner.html">Dinner</a>
+                          <a href="desserts.html">Desserts</a>
+                        </div>
+                      </div></li>
+                      <li><div class="dropdown">
+                        <button class="dropbtn">Occassions
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="ganesh.html">Ganesh Chaturthi</a>
+                          <a href="dasara.html">Dussehra</a>
+                          <a href="diwali.html">Diwali</a>
+                          <a href="ramzan.html">Ramzan</a>
+                          <a href="christmas.html">Christmas</a>
+                          <a href="sankranti.html">Makar Sankranti</a>
+                        </div>
+                      </div></li>
+                      
+                      </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form id="form" role="search">
+                          <input
+                            type="search"
+                            id="query"
+                            name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content"
+                          />
+                          <button style="width: 10px">&#8981;</button>
+                        </form>
+                        <script>
+                          const f = document.getElementById("form");
+                          const q = document.getElementById("query");
+                          const google = "https://www.allrecipes.com/";
+                          const site = "";
+        
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + "+" + q.value;
+                            const win = window.open(url, "_blank");
+                            win.focus();
+                          }
+        
+                          f.addEventListener("submit", submitted);
+                        </script>
+                </ul>
+            </div>
+        </nav>
+    <div class="header1">
+    <div class="card-grid" >
+        <div class="food-list" id="food-list">
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/dalmakhani.webp">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Dal Makhani</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get16thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+               
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/samosa.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Samosa</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get17thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/kulfi.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Kulfi</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get18thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/naan.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Naan</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get19thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+        </div> 
+        <div class = "sixteen-meal-detail" id="sixteen-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Dal makhani</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Dal makhani is a dish associated with Punjabi cuisine. A relatively modern variation of traditional lentil dishes, it is made with urad dal and other pulses, and includes butter and cream.  </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1 cup lentils
+                        <br>1/4 cup dry kidney beans (Optional)
+                        <br>water to cover
+                        <br>5 cups water
+                        <br>salt to taste
+                        <br>2 tablespoons vegetable oil
+                        <br>1 tablespoon cumin seeds
+                        <br>4 cardamom pods
+                        <br>1 cinnamon stick, broken
+                        <br>4 bay leaves
+                        <br>6 whole cloves
+                        <br>1 1/2 tablespoons ginger paste
+                        <br>1 1/2 tablespoons garlic paste
+                        <br>1/2 teaspoon ground turmeric
+                        <br>1 pinch cayenne pepper, or more to taste
+                        <br>1 cup canned tomato puree, or more to taste
+                        <br>1 tablespoon chili powder
+                        <br>2 tablespoons ground coriander
+                        <br>1/4 cup butter
+                        <br>2 tablespoons dried fenugreek leaves (Optional)
+                        <br>1/2 cup cream (Optional)
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">
+                        Place lentils and kidney beans in a large bowl; cover with plenty of water. Soak for at least 2 hours or overnight. Drain.
+                        Cook lentils, kidney beans, 5 cups water, and salt in a pot over medium heat until tender, stirring occasionally, about 1 hour. Remove from heat and set aside. Keep the lentils, kidney beans, and any excess cooking water in the pot.
+                        Heat vegetable oil in a saucepan over medium-high heat. Cook cumin seeds in the hot oil until they begin to pop, 1 to 2 minutes. Add cardamom pods, cinnamon stick, bay leaves, and cloves; cook until bay leaves turn brown, about 1 minute. Reduce heat to medium-low; add ginger paste, garlic paste, turmeric, and cayenne pepper. Stir to coat.
+                        Stir tomato puree into spice mixture; cook over medium heat until slightly reduced, about 5 minutes. Add chili powder, coriander, and butter; cook and stir until butter is melted.
+                        Stir lentils, kidney beans and any leftover cooking water into tomato mixture; bring to a boil, reduce heat to low. Stir fenugreek into lentil mixture. Cover saucepan and simmer until heated through, stirring occasionally, about 45 minutes. Add cream and cook until heated through, 2 to 4 minutes.
+                    </p>
+        
+                    <h3>Nutrition Information</h3>
+                    <p>
+                        <br>Calories 390
+                        <br>Fat 22g
+                        <br>Carbs 37g
+                        <br>Protein 32g
+                    </p>
+                    </div>
+                <div class = "meal-img">
+                    <img src = "./img/dalmakhani.webp" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=Qrdlz8kdsvk" class="meal-link-btn">Watch Video</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "seventeen-meal-detail" id="seventeen-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Samosa</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">These stuffed savory pastries are a traditional Indian favorite. Lamb meat and spices are cooked together to create a mouthwatering filling for the easy to make dough. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>2 cups all-purpose flour
+                        <br>1/2 teaspoon salt                       
+                        <br>2 tablespoons butter                       
+                        <br>1/4 cup water                       
+                        <br>1 quart oil for deep frying                      
+                        <br>2 tablespoons butter                      
+                        <br>1 small onion, chopped                      
+                        <br>2 cloves garlic, chopped                       
+                        <br>2 green chile peppers, chopped                       
+                        <br>1 tablespoon fresh ginger root, chopped                       
+                        <br>1/2 teaspoon ground turmeric                      
+                        <br>1/2 teaspoon chili powder                      
+                        <br>3/4 pound ground lamb                        
+                        <br>1 teaspoon salt                        
+                        <br>2 teaspoons garam masala                        
+                        <br>1 1/2 tablespoons fresh lemon juice
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left"><br>In a medium bowl, mix flour, salt and butter until the mixture resembles fine bread crumbs. Pour in water, using more (up to approximately 1/4 cup) if necessary to make a smooth dough. Pat into a ball. Place on a lightly floured surface and knead 10 minutes, or until dough is smooth and elastic. Return to the bowl, cover and set aside.
+                        Heat oil in a large, deep skillet to 375 degrees F (190 degrees C).
+                        Melt butter in a medium saucepan over medium high heat. Stir in onion, garlic, green chile peppers and ginger. Cook 5 minutes, or until onions are golden brown. Stir in turmeric, chili powder, ground lamb and salt. Cook until the lamb meat is evenly brown, about 10 minutes. Stir in garam masala and lemon juice. Continue cooking 5 minutes, then remove from heat.
+                        Divide dough into 15 equal portions. Roll portions into balls, then flatten into 4 inch circles. Cut each circle in half. Dampen edges and form semicircles into cones. Fill cones with equal portions of the lamb meat mixture. Dampen top and bottom edges of cones, and pinch to seal.
+                        Carefully lower cones into preheated oil a few at a time. Fry until golden brown, 2 to 3 minutes. Drain on paper towels. Serve warm.
+
+                        </p>
+                    <h3>Nutrition Information</h3>
+                    <p>Calories 105
+                        <br>Fat 7g
+                        <br>Carbs 7g
+                        <br>Protein 3g</p>
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/samosa.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=h1pnn_vvSYM" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div>  
+        <div class = "eighteen-meal-detail" id="eighteen-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Kulfi</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Kulfi is a frozen dairy dessert from the Indian subcontinent. It is often described as "traditional Indian ice cream". </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1 1/4 cups evaporated milk
+                        <br>1 1/4 cups sweetened condensed milk                        
+                        <br>1 (16 ounce) container frozen whipped topping, thawed                        
+                        <br>4 slices white bread, torn into pieces                        
+                        <br>1/2 teaspoon ground cardamom
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left"><br>Combine evaporated milk, condensed milk and whipped topping in a blender and blend in pieces of bread until smooth.
+                        Pour mixture into a 9x13 inch baking dish or two plastic ice cube trays, sprinkle with cardamom and freeze for 8 hours or overnight.
+
+                        </p>
+                    <h3>Nutrition Information</h3>
+                    <p>Calories 139
+                        <br>Fat 7g
+                        <br>Carbs 16g
+                        <br>Protein 3g</p>
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/kulfi.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=f6D7A6-QNl8" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div>  
+        
+        <div class = "nineteen-meal-detail" id="nineteen-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Naan</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Naan is a leavened, oven-baked or tawa-fried flatbread, which is found in the cuisines mainly of Iran, Afghanistan, Central Asia, the Indian subcontinent, Indonesia, Malaysia, Myanmar, and the Caribbean. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1 cup warm water
+                        <br>2 1/2 teaspoons active dry yeast                        
+                        <br>2 tablespoons sugar, or more to taste                        
+                        <br>3 tablespoons milk                        
+                        <br>1 egg, beaten                        
+                        <br>2 teaspoons salt, or to taste                        
+                        <br>5 1/2 cups bread flour, or as needed                        
+                        <br>2 cloves garlic, minced (Optional)                        
+                        <br>1/4 cup butter, melted
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left"><br>Combine water, yeast, and sugar in a large bowl. Let stand until bubbly and frothy, about 10 minutes.
+                        Stir in milk, egg, salt, and enough flour to make a soft dough. Knead dough on a lightly floured surface until smooth, 6 to 8 minutes. Place dough into a well oiled bowl, cover with a damp cloth, and set aside to rise until the dough has doubled in volume, about 1 hour.
+                        Punch down dough and knead well. For garlic naan, knead in garlic at this point.
+                        Pinch off small handfuls of dough about the size of golf balls. Roll into balls, cover with a clean cloth, and allow to rise until doubled in size, about 30 minutes.
+                        Set an oven rack about 6 inches from the heat source and preheat the oven's broiler.
+                        Roll out 2 balls of dough into elongated ovals. Place on an ungreased baking sheet and cook under the broiler until lightly browned, about 2 minutes. Brush butter on both sides and flip. Continue broiling until the second side is firm and golden, 2 minutes more. Repeat with remaining dough.
+
+
+
+                        </p>
+                    <h3>Nutrition Information</h3>
+                    <p>Calories 252
+                        <br>Fat 5g
+                        <br>Carbs 43g
+                        <br>Protein 8g</p>
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/naan.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=ls36bJs9-YI" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div>  
+    </div>
+         <!--Script for Javascript-->
+    <script src="./assets/djs.js"></script>
+</body>
+</html>

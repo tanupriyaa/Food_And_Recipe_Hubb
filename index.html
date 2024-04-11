@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/RecipeLogo.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <title>Express Eat</title>
+    <title>FoodRecipeHub</title>
 </head>
 <body>
 
     <!--- Navigation Bar -->
     <div class="header">
         <nav class="nav-bar">
-            <img src="./img/Logo.png" class="brand-name">
-            <a href="#" class="hamburger">
+            <img src="./img/logo1.png" class="brand-name">
+            <a href="#" class="bg">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -23,35 +23,91 @@
             <div class="menu-bar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Meals
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="breakfast.html">Breakfast</a>
+                          <a href="lunch.html">Lunch</a>
+                          <a href="dinner.html">Dinner</a>
+                          <a href="desserts.html">Desserts</a>
+                        </div>
+                      </div></li>
+                      <li><div class="dropdown">
+                        <button class="dropbtn">Occassions
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="ganesh.html">Ganesh Chaturthi</a>
+                          <a href="dasara.html">Dussehra</a>
+                          <a href="diwali.html">Diwali</a>
+                          <a href="ramzan.html">Ramzan</a>
+                          <a href="christmas.html">Christmas</a>
+                          <a href="sankranti.html">Makar Sankranti</a>
+                        </div>
+                      </div></li>
+                      
+                      </li>
                     <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="auth.html">Login</a></li>
+                    <li>
+                        <form id="form" role="search">
+                          <input
+                            type="search"
+                            id="query"
+                            name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content"
+                          />
+                          <button style="width: 10px">&#8981;</button>
+                        </form>
+                        <script>
+                          const f = document.getElementById("form");
+                          const q = document.getElementById("query");
+                          const google = "https://www.indianhealthyrecipes.com/";
+                          const site = "";
+        
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + "+" + q.value;
+                            const win = window.open(url, "_blank");
+                            win.focus();
+                          }
+        
+                          f.addEventListener("submit", submitted);
+                        </script>
+                        
                 </ul>
             </div>
         </nav>
         <!-- Search Bar -->
-        <div class="title">Find a Recipe</div>
+        <div class="title">FoodRecipeHub</div>
         <div class="search-wrapper">
             <div class="fa fa-search"></div>
-            <input type="text" name=""  id="search" placeholder="What do you want to eat?" onkeyup="search()">
+            <input type="text" name=""  id="search" placeholder="Craving something specific? Type it here!" onkeyup="search()">
+            
             <div class="fa fa-times" onclick="clearInput()" ></div>
         </div>
     </div>
 
     <!-- Search Results -->
         <div class="result">
-            <h1>Your Search Result: </h1>
+            <h1>Popular Recipes: </h1>
         </div>
         
         <!-- Main Content -->
         <div class="card-grid" >
             <div class="food-list" id="food-list">
-                    <p id="none" style="display: none;">Sorry, the food you were looking for was not available.</p>
+                    <p id="none" style="display: none;">Sorry, the food you were looking for is not available.</p>
                     <div class="card card-shadow">
                         <div class="card-header card-image">
-                            <img src="./img/Sisig.webp">
+                            <img src="./img/biryani.jpg">
                         </div>
                         <div class="card-body" >
-                        <h3> Sisig </h3>
+                        <h3> Chicken Biryani </h3>
                         </div>
                         <div class="card-footer">
                             <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
@@ -59,10 +115,10 @@
                     </div>
                     <div class="card card-shadow">
                         <div class="card-header card-image">
-                            <img src="./img/Adobo.webp">
+                            <img src="./img/gulab-jamun.jpg">
                         </div>
                         <div class="card-body" >
-                        <h3> Adobo </h3>
+                        <h3> Gulab Jamun</h3>
                         </div>
                         <div class="card-footer">
                             <button class="btn" onclick="get2ndRecipe()">Get Recipe</button>
@@ -70,10 +126,10 @@
                     </div>
                     <div class="card card-shadow">
                         <div class="card-header card-image">
-                            <img src="./img/Porkchop.webp">
+                            <img src="./img/butterchicken.jpg">
                         </div>
                         <div class="card-body" >
-                            <h3>Sizzling Porkchop</h3>
+                            <h3>Butter Chicken</h3>
                         </div>
                         <div class="card-footer">
                             <button class="btn" onclick="get3rdRecipe()">Get Recipe</button>
@@ -92,10 +148,10 @@
                     </div>
                     <div class="card card-shadow">
                         <div class="card-header card-image">
-                            <img src="./img/Sinigang.webp">
+                            <img src="./img/ferrerorocher.jpg">
                         </div>
                         <div class="card-body" >
-                        <h3> Sinigang </h3>
+                        <h3> Ferreo Rocher Milkshake </h3>
                         </div>
                         <div class="card-footer">
                             <button class="btn" onclick="get5thRecipe()">Get Recipe</button>
@@ -103,10 +159,10 @@
                     </div>
                     <div class="card card-shadow">
                         <div class="card-header card-image">
-                            <img src="./img/Lumpia.webp">
+                            <img src="./img/greenpeasmasala.jpg">
                         </div>
                         <div class="card-body" >
-                        <h3> Lumpia</h3>
+                        <h3> Green Pead Masala</h3>
                         </div>
                         <div class="card-footer">
                             <button class="btn" onclick="get6thRecipe()">Get Recipe</button>
@@ -114,10 +170,10 @@
                     </div>
                     <div class="card card-shadow">
                         <div class="card-header card-image">
-                            <img src="./img/Longanisa.webp">
+                            <img src="./img/pancakes.jpg">
                         </div>
                         <div class="card-body" >
-                        <h3> Longaniza</h3>
+                        <h3> Pan cakes</h3>
                         </div>
                         <div class="card-footer">
                             <button class="btn" onclick="get7thRecipe()">Get Recipe</button>
@@ -125,10 +181,10 @@
                     </div>
                     <div class="card card-shadow">
                         <div class="card-header card-image">
-                            <img src="./img/Burger.webp">
+                            <img src="./img/baingan.jpg">
                         </div>
                         <div class="card-body" >
-                        <h3>Chicken Burger</h3>
+                        <h3>Baingan ka Bharta</h3>
                         </div>
                         <div class="card-footer">
                             <button class="btn" onclick="get8thRecipe()">Get Recipe</button>
@@ -136,10 +192,10 @@
                     </div>
                     <div class="card card-shadow">
                         <div class="card-header card-image">
-                            <img src="./img/Menudo.webp">
+                            <img src="./img/jalebi.jpg">
                         </div>
                         <div class="card-body" >
-                        <h3>Menudo</h3>
+                        <h3>Jalebi</h3>
                         </div>
                         <div class="card-footer">
                             <button class="btn" onclick="get9thRecipe()">Get Recipe</button>
@@ -147,10 +203,10 @@
                     </div>
                     <div class="card card-shadow">
                         <div class="card-header card-image">
-                            <img src="./img/Tapsilog.webp">
+                            <img src="./img/vegpulao.jpg">
                         </div>
                         <div class="card-body" >
-                        <h3>Tapsilog</h3>
+                        <h3>Vegetable Pulao</h3>
                         </div>
                         <div class="card-footer">
                             <button class="btn" onclick="get10thRecipe()">Get Recipe</button>
@@ -158,10 +214,10 @@
                     </div>
                     <div class="card card-shadow">
                         <div class="card-header card-image">
-                            <img src="./img/Potato-Breakfast-Skillet.webp">
+                            <img src="./img/paneer butter masala.jpg">
                         </div>
                         <div class="card-body" >
-                        <h3>Potato Egg Skillet</h3>
+                        <h3>Paneer Butter Masala</h3>
                         </div>
                         <div class="card-footer">
                             <button class="btn" onclick="get11thRecipe()">Get Recipe</button>
@@ -180,51 +236,61 @@
 
                 <!-- recipe details -->
                 <div class="meal-content">
-                    <h2 class="meal-name">Sisig</h2>
+                    <h2 class="meal-name">Chicken Biryani</h2>
                     <div class="meal-about">
                         <h3 class="meal-title-about">About Meal</h3>
-                        <p class="meal-descript-about">Sisig is a Filipino dish made from parts of a pig's face and belly, and chicken liver which is usually seasoned with calamansi, onions, and chili peppers. It originates from the Pampanga region in Luzon. Sisig is a staple of Kapampangan cuisine. </p>
+                        <p class="meal-descript-about">Biryani is a mixed rice dish that was thought to have originated from ancient Iran before settling in modern India. </p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
-                        <p><br>1 lb. pig ears
-                            <br>1 1/2 lb pork belly
-                            <br>1 piece onion minced
-                            <br>3 tablespoons soy sauce
-                            <br>1/4 teaspoon ground black pepper
-                            <br>1 knob ginger minced (optional)
-                            <br>3 tablespoons chili flakes
-                            <br>1/2 teaspoon garlic powder
-                            <br>1 piece lemon or 3 to 5 pieces calamansi
-                            <br>½ cup butter or margarine
-                            <br>¼ lb chicken liver
-                            <br>6 cups water
-                            <br> 3 tablespoons mayonnaise
-                            <br>1/2 teaspoon salt
-                            <br> 1 piece egg (optional)
+                        <h3>Ingredients</h3>
+                        <p><br>1 cup boiled basmati rice
+                            <br>1/2 teaspoon mint leaves  
+                            <br>600 gm chicken
+                            <br>1 tablespoon garam masala powder
+                            <br>salt as required
+                            <br>1 teaspoon saffron
+                            <br>2 teaspoon virgin olive oil
+                            <br>1 tablespoon bay leaf
+                            <br>3 green cardamom
+                            <br>1 black cardamom
+                            <br>2 clove, 2 onions
+                            <br>1 teaspoon cumin seeds
+                            <br>4 green chillies
+                            <br>1 teaspoon turmeric
+                            <br>1 tablespoon ginger paste
+                            <br>1 tablespoon garlic paste
+                            <br>1 teaspoon red chilli powder
+                            <br>1 cup hung curd
+                            <br>1/2 tablespoon ginger
+                            <br>2 tablespoon coriander leaves
+                            <br>2 drops kewra
+                            <br>1 tablespoon rose water
+                            <br>1 tablespoon ghee
                         </p>
-                        <h3>Instruction:</h3>
-                        <p><br>Pour the water in a pan and bring to a boil Add salt and pepper.
-                            <br>Put-in the pig’s ears and pork belly then simmer for 40 minutes to 1 hour (or until tender).
-                            <br>Remove the boiled ingredients from the pot then drain excess water
-                            <br>Grill the boiled pig ears and pork belly until done
-                            <br>Chop the pig ears and pork belly into fine pieces
-                            <br>In a wide pan, melt the butter or margarine. Add the onions. Cook until onions are soft.
-                            <br>Put-in the ginger and cook for 2 minutes
-                            <br>Add the chicken liver. Crush the chicken liver while cooking it in the pan.
-                            <br>Add the chopped pig ears and pork belly. Cook for 10 to 12 minutes
-                            <br>Put-in the soy sauce, garlic powder, and chili. Mix well
-                            <br>Add salt and pepper to taste
-                            <br>Put-in the mayonnaise and mix with the other ingredients
-                            <br>Transfer to a serving plate. Top with chopped green onions and raw egg.
-                            <br>Serve hot. Share and Enjoy (add the lemon or calamansi before eating)</p>
+                        <h3>Instructions</h3>
+                        <p align="left">Firstly soak saffron in water to prepare saffron water (one tsp saffron can be soaked in 1/4 cup water).
+                            Next, mix kewra drops in water and mix well to make kewra water. Set them aside for later usage.
+                            Now, chop the onion and coriander leaves and keep them aside.
+                            Heat olive oil in a deep bottomed pan. Once the oil is hot enough, add cumin seeds, bay leaf, green cardamom, black cardamom, cloves in it, and saute for about a minute. 
+                            Then, add chopped onion to it and saute until pink. Now, add chicken into it with slit green chillies, turmeric, salt to taste, ginger-garlic paste, red chilli powder and green chilli paste. Mix well all the spices and cook for 2-3 minutes. Then, add hung curd into it and give a mix.
+                            Turn the flame to medium again and add garam masala in it along with ginger julienned, coriander and mint leaves. Add kewra water, rose water and 1 tsp saffron water in it. Cook till the chicken is tender. Then add 1 cup cooked rice and spread evenly. Then add the remaining saffron water and pour ghee over it. You can now cook the dish without the lid or cover it with a lid to give a dum-effect due to the steam formation.
+                            Cook for 15-20 minutes with a closed lid and garnish with 1 tbsp fried onions and coriander leaves. Serve hot chicken biryani with raita of your choice. Enjoy!
+                        </p>
                 
-                    </div>
+                        <h3>Tips</h3>
+                        <p align="left">1. The first and foremost important thing to take care of while preparing chicken biryani recipe is, always use a heavy-bottomed pan as you would not want the chicken getting cooked.
+                            <br>2. The restaurant-style chicken biryani recipe uses the whole chicken in preparation and the chicken can dry when cooking at home. Always use chicken thigh or drumsticks. <br>
+                            3. If you want your chicken to be juicier in your biryani, do not remove the bone. <br>
+                            4. If your cooked rice has turned sticky, spread it on a plate and leave it for 5 minutes. The rice will be separate and fluffy again.
+                            <br>5. Freshly pound spices bring out the best taste in Chicken Biryani Recipe, so make sure that you dry roast all the whole spices for a good 2-3 minutes and then pound or grind them.</p>
+                        <h3>Nutrition Information</h3>
+                        <p>The chicken biryani calories per 500g are 360 calories. Of these, 56 grams come from carbohydrates, 16 grams are from protein, 8 grams are from fat, and the remaining 15 grams are from other nutrients. One chicken biryani, i.e., 1 kg of biryani contains around 720 calories.</p>
+                        </div>
                     <div class = "meal-img">
-                        <img src = "./img/Sisig.webp" alt = "">
+                        <img src = "./img/biryani.jpg" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/mryx6ezu" class="meal-link-btn">Watch Video</a>
+                        <a href="https://www.youtube.com/watch?v=uygb9O-MDPw" class="meal-link-btn">Watch Video</a>
                     </div>
                 </div>
             </div>
@@ -236,38 +302,44 @@
 
                 <!-- recipe details -->
                 <div class="meal-content">
-                    <h2 class="meal-name">Adobo</h2>
+                    <h2 class="meal-name">Gulab Jamun</h2>
                     <div class="meal-about">
                         <h3 class="meal-title-about">About Meal</h3>
-                        <p class="meal-descript-about">Philippine adobo is a popular Filipino dish and cooking process in Philippine cuisine that involves meat, seafood, or vegetables marinated in vinegar, soy sauce, garlic, bay leaves, and black peppercorns, which is browned in oil, and simmered in the marinade. </p>
+                        <p class="meal-descript-about">A popular Indian dessert based on two flavors – gulab (which means rose) and jamun (which refers to purple jamun berries, similar to blueberries).</p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
-                        <p><br>2 lbs pork belly
-                            <br>2 tablespoons garlic minced or crushed
-                            <br>5 dried bay leaves
-                            <br>4 tablespoons vinegar
-                            <br>1/2 cup soy sauce
-                            <br>1 tablespoon peppercorn
-                            <br>2 cups water
-                            <br>Salt to taste
+                        <h3>Ingredients</h3>
+                        <p><br>1/2 tin Nestle MILKMAID
+                            <br>2 cups (200 gm) Flour
+                            <br>600 gms Grated Paneer
+                            <br>200 gm Sooji/Rava
+                            <br>1 1/2 tablespoon Baking Powder
+                            <br>1 1/2 tablespoon Baking Soda
+                            <br>For Frying Oil
+                            <br>2 litres Water
+                            <br>1 kg Sugar
                         </p>
-                        <h3>Instruction:</h3>
-                        <p><br>1. Combine the pork belly, soy sauce, and garlic then marinade for at least 1 hour
-                            <br>2. Heat the pot and put-in the marinated pork belly then cook for a few minutes
-                            <br>3. Pour remaining marinade including garlic.
-                            <br>4. Add water, whole pepper corn, and dried bay leaves then bring to a boil. Simmer for 40 minutes to 1 hour
-                            <br>5. Put-in the vinegar and simmer for 12 to 15 minutes
-                            <br>6. Add salt to taste
-                            <br>7. Serve hot. Share and enjoy!
+                        <h3>Instructions</h3>
+                        <p align="left"> Boil sugar and water to prepare syrup remove from fire. Add cardamom and keep aside to cool.
+                            In a mixing bowl put the flour, paneer, sooji, Nestlé MILKMAID, baking powder and baking soda. Mix gently to make a soft dough. Do not knead too much.
+                            Divide the mixture into 30-35 portions and gently roll into round gulab jamuns. Fry in the oil at very low flame till golden brown in color.
+                            Keep putting the fried gulab jamuns in the prepared sugar syrup. Once all the gulab jamuns are in the sugar syrup bring it to a boil and remove from flame.
+                            Serve warm
                             </p>
-                
-                    </div>
+                        <h3>Tips</h3>
+                        <p align="left">If the oil is not hot enough, jamuns will soak up lots of oil and turn soggy. They will also not hold the shape well and may form a crusty layer over the gulab jamuns later.
+                            If the oil is too hot, the dough will get dispersed in the oil or the jamuns will get plenty of cracks or may get blistered. Also they will get browned quickly without cooking inside. There will be a hard center even after soaking since the dough has remained uncooked.
+                            Once the oil is hot, regulate the flame to medium. Drop the balls one after the other slowly. Do not add a lot of them and crowd the pan as they need enough space to fry and become big while frying. Do not disturb them until they firm up and cook a bit.
+                            Once you see the jamuns are turning firm, then reduce the flame to low and fry gently stirring them until evenly golden.
+                        <h3>Nutrition Information</h3>
+                        <p>One Gulab jamun (25 grams) contains around 175 calories.
+                            Out of which carbohydrates comprise 140 calories, proteins account for 10 calories and remaining calories come from fat which is 25 calories</p>
+                        </div>
                     <div class = "meal-img">
-                        <img src = "./img/Adobo.webp" alt = "">
+                        <img src = "./img/gulabjamun.webp" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/23pr9c5j" class="meal-link-btn" >Watch Video</a>
+                        <a href="https://www.youtube.com/watch?v=P7yIFSqu-5U" class="meal-link-btn" >Watch Video</a>
                     </div>
                 </div>
             </div>  
@@ -279,41 +351,64 @@
 
                 <!-- recipe details -->
                 <div class="meal-content">
-                    <h2 class="meal-name">Sizzling Porkchop</h2>
+                    <h2 class="meal-name">Butter Chicken</h2>
                     <div class="meal-about">
                         <h3 class="meal-title-about">About Meal</h3>
-                        <p class="meal-descript-about">Sizzling Pork Chop tastes excellent and is simple to make. The sizzling effect adds to the pleasure of this dish. Aside from the pork chop, this dish requires mixed veggies, yellow rice, and gravy. I used fresh frozen mixed vegetables for the vegetables. 
+                        <p class="meal-descript-about"> Indian classic combination of chicken, tomato sauce, and a slew of aromatic spices all in one pot to make a flavorful dinner that's just as good as the version you'll get at restaurants. 
                         </p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
-                        <p><br>1 piece 8 oz pork loin chop
-                            <br>1 cup beef broth
-                            <br>1/4 teaspoon salt
-                            <br>1/4 teaspoon ground black pepper
-                            <br>1/4 teaspoon garlic powder
-                            <br>3/4 cup mixed vegetables cooked
-                            <br>3 tablespoons all-purpose flour
-                            <br>4 tablespoons butter
-                            <br>1 cup yellow rice
+                        <h3>Ingredients</h3>
+                        <p><br>For 4 servings:
+                            <br>2 lb boneless, skinless chicken breast(910 g), cubed
+                            <br>salt, to taste
+                            <br>pepper, to taste
+                            <br>2 teaspoons chili powder, divided
+                            <br>½ teaspoon turmeric
+                            <br>6 tablespoons unsalted butter, divided
+                            <br>1 ½ cups diced yellow onion(225 g)
+                            <br>3 teaspoons garam masala
+                            <br>1 teaspoon ground cumin
+                            <br>1 teaspoon cayenne pepper
+                            <br>1 tablespoon grated ginger
+                            <br>3 cloves garlic, minced
+                            <br>1 3-inch cinnamon stick
+                            <br>14 oz tomato sauce(395 g)
+                            <br>1 cup water(240 mL)
+                            <br>1 cup heavy cream(240 mL)
+                            <br>cooked rice, for serving
+                            <br>chopped fresh cilantro, for garnish
                         </p>
-                        <h3>Instruction:</h3>
-                        <p><br>1. Rub salt, ground black pepper, and garlic powder on the pork tenderloin chop. Let it stay for at least 30 minutes.
-                            2. Make the gravy by melting 1 tablespoon butter in a saucepan. When the butter melts, gradually add the flour and whisk until the color turns light brown. Pour-in the beef broth and stir. Add salt and pepper according to taste. Continue cooking until the texture becomes thick. Set aside.
-                            3. Heat a skillet of frying pan then put-in 2 tablespoons of butter and let melt.
-                            4. Pan-fry the pork loin chop in medium heat until the color of each side turns light brown (approximately 7 to 8 minutes per side). Set aside.
-                            5. Heat a sizzling plate or fajita plate then put-in 1 tablespoon butter.
-                            6. Distribute the butter around the plate then arrange rice, mixed vegetables, and pork loin chop.
-                            7. Pour gravy over the pork loin chop then turn-off heat.
-                            8. Serve. Share and enjoy!
+                        <h3>Instructions</h3>
+                        <p align="left"><br>In a large bowl, season the chicken with salt, pepper, 1 teaspoon of chili powder, and the turmeric. Let sit for 15 minutes to marinate.
+                            Melt 2 tablespoons of butter in a large pot over medium heat. Brown the chicken, then remove from the pot.
+                            Melt another 2 tablespoons of butter in the pot, then add the onion, garam masala, remaining teaspoon of chili powder, the cumin, ginger, garlic, cayenne, cinnamon, salt, and pepper. Cook until fragrant.
+                            Add the tomato sauce and bring to a simmer.
+                            Add the water and cream and return to a simmer.
+                            Return the chicken to the pot, cover, and simmer for 10-15 minutes.
+                            Stir in the remaining 2 tablespoons of butter and season with more salt and pepper to taste.
+                            Serve the chicken over rice and garnish with cilantro.
+                            Enjoy!
                             </p>
-                
+                        <h3>Tips</h3>
+                        <p align="left"> Marination is the key to get flavorful, tender & succulent pieces of chicken.
+                            Yogurt in the marinade tenderizes the chicken so do not skip it.
+                            Makhani recipe never uses onion. However using them helps to balance the tang/sour taste of tomatoes, especially if you are using passata or canned tomatoes.                            
+                            The rich taste in the gravy comes from the cashews (or almonds) & cream.                            
+                            You can make the gravy ahead and refrigerate. Just grill the marinated chicken when needed and heat up the gravy. Then add the grilled chicken.</p>
+                        <h3>Nutrition Information</h3>
+                        <p>Calories 799
+                            <br>Fat 52g
+                            <br>Carbs 15g
+                            <br>Fiber 3g
+                            <br>Sugar 8g
+                            <br>Protein 74g</p>
                     </div>
                     <div class = "meal-img">
-                        <img src = "./img/Porkchop.webp" alt = "">
+                        <img src = "./img/butterchicken.jpg" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/yckbt76x" class="meal-link-btn" >Watch Video</a>
+                        <a href="https://www.youtube.com/watch?v=a03U45jFxOI" class="meal-link-btn" >Watch Video</a>
                     </div>
                 </div>
             </div>  
@@ -332,7 +427,7 @@
                         </p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
+                        <h3>Ingredients:</h3>
                         <p><br>3 eggs, beaten
                             <br>1 tsp sunflower oil
                             <br>1 tsp butter
@@ -344,13 +439,14 @@
                             4. Fill the omelette: Add the filling—but don’t overstuff the omelette—when the eggs begin to set. Cook for a few more seconds
                             5. Fold and serve: Fold the omelette in half. Slide it onto a plate with the help of a silicone spatula.
                         </p>
-                
+                        <h3>Nutrition Information</h3>
+                        <p>One egg omelette calories amount to 74 calories when made plain without onions and other vegetables. This dish contains 0% carbs, 7 g of fat, and 6 g of protein. If you make a masala omelette with 2-3 eggs, it will make up for 12% of the total calorie count (2000 calories) required for an adult.</p>
                     </div>
                     <div class = "meal-img">
                         <img src = "./img/Omelette.webp" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/bde4yd4u" class="meal-link-btn" >Watch Video</a>
+                        <a href="https://youtube.com/watch?v=7dV4Qw8qdsA" class="meal-link-btn" >Watch Video</a>
                     </div>
                 </div>
             </div>  
@@ -362,45 +458,39 @@
 
                 <!-- recipe details -->
                 <div class="meal-content">
-                    <h2 class="meal-name">Sinigang</h2>
+                    <h2 class="meal-name">Ferrero Rocher Milkshake</h2>
                     <div class="meal-about">
                         <h3 class="meal-title-about">About Meal</h3>
-                        <p class="meal-descript-about">Sinigang is a Filipino soup or stew characterized by its sour and savory taste. It is most often associated with tamarind, although it can use other sour fruits and leaves as the souring agent. It is one of the more popular dishes in Filipino cuisine.
+                        <p class="meal-descript-about">Ferrero Rocher is a chocolate and hazelnut confectionery, introduced in 1982 and produced by the Italian company Ferrero. Michele Ferrero is credited as the product's creator.
                         </p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
-                        <p><br>2 lbs pork belly or buto-buto
-                            <br>1 bunch spinach or kang-kong
-                            <br>3 tablespoons fish sauce
-                            <br>12 pieces string beans sitaw, cut in 2 inch length
-                            <br>2 pieces tomato quartered
-                            <br>3 pieces chili or banana pepper
-                            <br>1 tablespoons cooking oil
-                            <br>2 quarts water
-                            <br>1 piece onion sliced
-                            <br>2 pieces taro gabi, quartered
-                            <br>1 pack sinigang mix good for 2 liters water
+                        <h3>Ingredients</h3>
+                        <p><br>3 cups Vanilla Icecream
+                            <br>1/2 cup Milk
+                            <br>2 tablespoon Nutella
+                            <br>5 Ferreo Rocher balls
+                            <br>Whipped cream
+                            <br>Chocolate syrup
                         </p>
-                        <h3>Instruction:</h3>
-                        <p><br>1. Heat the pot and put-in the cooking oil
-                            <br>2. Sauté the onion until its layers separate from each other
-                            <br>3.Add the pork belly and cook until outer part turns light brown
-                            <br>4. Put-in the fish sauce and mix with the ingredients
-                            <br>5. Pour the water and bring to a boil
-                            <br>6. Add the taro and tomatoes then simmer for 40 minutes or until pork is tender
-                            <br>7. Put-in the sinigang mix and chili
-                            <br>8. Add the string beans (and other vegetables if there are any) and simmer for 5 to 8 minutes
-                            <br>9. Put-in the spinach, turn off the heat, and cover the pot. Let the spinach cook using the remaining heat in the pot.
-                            <br>10. Serve hot. Share and enjoy!
+                        <h3>Instructions</h3>
+                        <p align="left">Add the ice cream, milk, Nutella and 3 Ferrero Rocher balls to a blender.
+                            Place the lid on the blender. Start on a low speed and gradually increase the speed until the milkshake is blended and creamy. If it is too thick you can add a bit more milk until you have the consistency you prefer.
+                            Taste the milkshake and if you want more chocolate or hazelnut flavour you can add a bit more Nutella or another Ferrero Rocher ball.
+                            Drizzle chocolate sauce on the inside of two tall glasses. Pour the milkshake into the glasses. Top with whipped cream, drizzle with chocolate sauce and top with a Ferrero Rocher ball.
                         </p>
-                
+                        <h3>Tips</h3>
+                        <p>For thicker milkshake:
+                            The thickness of the milkshake will be determined by how firm the ice cream is and how much milk is added. To make the milkshake thicker, make sure the ice cream is on the firmer side and add a small amount of milk at a time until you have the consistency you are looking for.
+                        </p>
+                        <h3>Nutrition Information</h3>
+                        <p align="left">Calories: 776kcal | Carbohydrates: 78g | Protein: 13g | Fat: 45g | Saturated Fat: 20g | Polyunsaturated Fat: 1g | Monounsaturated Fat: 6g | Cholesterol: 94mg | Sodium: 189mg | Potassium: 561mg | Fiber: 2g | Sugar: 55g | Vitamin A: 933IU | Vitamin C: 1mg | Calcium: 348mg | Iron: 1mg</p>
                     </div>
                     <div class = "meal-img">
-                        <img src = "./img/Sinigang.webp" alt = "">
+                        <img src = "./img/ferrerorocher.jpg" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/ywbcrx4f" class="meal-link-btn" >Watch Video</a>
+                        <a href="https://www.youtube.com/watch?v=svVOVW486-8" class="meal-link-btn" >Watch Video</a>
                     </div>
                 </div>
             </div> 
@@ -412,39 +502,57 @@
 
                 <!-- recipe details -->
                 <div class="meal-content">
-                    <h2 class="meal-name">Lumpia</h2>
+                    <h2 class="meal-name">Green Peas Masala</h2>
                     <div class="meal-about">
                         <h3 class="meal-title-about">About Meal</h3>
-                        <p class="meal-descript-about">Different spring rolls known as "lumpia" are popular in the Philippines and Indonesia. Lumpia are formed of a thin pastry skin, also known as a "lumpia wrapper," that encloses either savory or sweet fillings. It may be either fresh or deep-fried and is frequently served as an appetizer or snack.
+                        <p class="meal-descript-about">Green peas masala is a tomato based gravy with spice powders and simply butter. A tasty curry that goes well with rice or roti, best side dish for chapati, poori.
                         </p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
-                        <p><br>50 pieces lumpia wrapper (Up to you how many pieces)
-                            <br>3 cups cooking oil
-                            <br>1 1/2 lbs ground pork
-                            <br>2 pieces onion minced
-                            <br>2 pieces carrots minced
-                            <br>1 1/2 teaspoons garlic powder
-                            <br>1/2 teaspoon ground black pepper
-                            <br>1/2 cup parsley chopped
-                            <br>1 1/2 teaspoons salt
-                            <br>1 tablespoon sesame oil
-                            <br>2 eggs
+                        <h3>Ingredients</h3>
+                        <p><br>1 & ¼ cups Green peas fresh or frozen
+                            <br>3 Onion small
+                            <br>5 Tomato small
+                            <br>1 & ½ teaspoon Ginger garlic paste
+                            <br>¼ teaspoon Fenugreek seeds or 1 tablespoon kasoori methi
+                            <br>¼ teaspoon Cumin seeds
+                            <br>2 teaspoon Red chilli powder Kashmiri or mild spice
+                            <br>2 teaspoon Coriander seeds powder
+                            <br>½ teaspoon Garam masala powder
+                            <br>2 tablespoon Coriander leaves chopped
+                            <br>¼ teaspoon Sugar
+                            <br>1 tablespoon Butter
+                            <br>1 tablespoon Oil
+                            <br>Salt
                         </p>
-                        <h3>Instruction:</h3>
-                        <p><br>1. Combine all filling ingredients in a bowl. Mix well.
-                            <br>2. Scoop around 1 to 1 1/2 tablespoons of filling and place over a piece of lumpia wrapper. Spread the filling and then fold both sides of the wrapper. Fold the bottom. Brush beaten egg mixture on the top end of the wrapper. Roll-up until completely wrapped. Perform the same step until all mixture are consumed.
-                            <br>3. Heat oil in a cooking pot. Deep fry lumpia in medium heat until it floats.
-                            <br>4. Remove from the pot. Let excess oil drip. Serve. Share and enjoy
+                        <h3>Instructions</h3>
+                        <p align="left">Golden roast firstly fenugreek seeds and cumin seeds in few drops of oil in a pan.
+                            Powder it using hand mortar and pestle or you can simply crush it using a rolling pin.
+                            Add 1 tablespoon oil in a pressure cooker, add ginger, garlic firstly. Followed by cubed onion.
+                            Saute until translucent. Then add cubed tomato.
+                            Fry them until the the tomatoes turn mushy.
+                            Cool and grind.
+                            Meanwhile, heat the pressure cooker with 2 tablespoon oil and temper with the items given under ‘to temper’ table.
+                            Add the ground onion tomato and add the masala powder, turmeric. Fry till oil separates.
+                            Fry covered as it will splutter a lot, in medium flame until it reduces in volume. Say 5-6 minutes.
+                            Add green peas and enough water (1 & ½ to 2 cups. Sprinkle salt and sugar.
+                            Pressure cook for a whistle in medium flame.
+                            Open once pressure is released naturally and add the powdered cumin and fenugreek (I had methi powder already)
+                            Just give it a boil, garnish with coriander leaves and butter.
+                            
                         </p>
-                
+                        <h3>Tips</h3>
+                        <p align="left">Better cover the masala while it is frying as it splutters a lot.
+                            You can add ginger garlic paste instead of adding whole garlic, ginger. If adding paste, add after sauteeing onion and fry for 30 seconds.
+                            Instead of adding fenugreek seeds powder, you can add kasoori methi like in my video.
+                            Roasted cumin seeds powder add a nice flavor to the gravy, so try not to skip it. I forgot to add in my updated video but highly recommend.
+                            While sauteeing the masala, make sure to saute until oil oozes. Otherwise curry won't be tasty.</p>
                     </div>
                     <div class = "meal-img">
-                        <img src = "./img/Lumpia.webp" alt = "">
+                        <img src = "./img/greenpeasmasala.jpg" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/2yp63vne" class="meal-link-btn" >Watch Video</a>
+                        <a href="https://youtu.be/1iYygZFsfTg" class="meal-link-btn" >Watch Video</a>
                     </div>
                 </div>
             </div> 
@@ -456,37 +564,45 @@
 
                 <!-- recipe details -->
                 <div class="meal-content">
-                    <h2 class="meal-name">Longaniza</h2>
+                    <h2 class="meal-name">Pancakes</h2>
                     <div class="meal-about">
                         <h3 class="meal-title-about">About Meal</h3>
-                        <p class="meal-descript-about">A chorizo-like Spanish sausage known as longaniza is also closely related to the Portuguese linguiça. Its distinctive qualities are viewed differently in each locale.
+                        <p class="meal-descript-about">A pancake is a flat cake, often thin and round, prepared from a starch-based batter that may contain eggs, milk and butter and cooked on a hot surface such as a griddle or frying pan, often frying with oil or butter. It is a type of batter bread.
                         </p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
-                        <p><br>1 ¾ lbs. ground pork
-                            <br>9 tablespoons dark brown sugar
-                            <br>1 tablespoon smoked paprika
-                            <br>3 tablespoons vegetable oil
-                            <br>1 ¼ tablespoons coarse salt
-                            <br>1 teaspoon ground black pepper
-                            <br>2 head garlic
+                        <h3>Ingredients</h3>
+                        <p><br>1 ½ cups all-purpose flour
+                            <br>3 ½ teaspoons baking powder
+                            <br>1 tablespoon white sugar
+                            <br>¼ teaspoon salt, or more to taste
+                            <br>1 ¼ cups milk
+                            <br>3 tablespoons butter, melted
+                            <br>1 egg
                         </p>
-                        <h3>Instruction:</h3>
-                        <p><br>1. Peel the skin off the garlic cloves. Crush thoroughly using mortar and pestle. Mince the crushed garlic. Set aside.
-                            <br>2. In a large mixing bowl, combine ground pork along with all of the ingredients. Mix well.
-                            <br>3. Cover the bowl. Refrigerate for 2 hours.
-                            <br>4. Shape the longganisa by laying a sheet of wax paper on a flat surface. Scoop around 3 tablespoons of mixture and put over the wax paper. Fold the wax paper from top to down until the mixture covered. Hold the edge of the paper with your fingers and then slide the card towards the mixture. Push a bit more until a sausage shape is formed. Do this step until the entire mixture is consumed.
-                            <br>5. Refrigerate overnight.
-                            <br>6. Cook and serve for breakfast. Share and enjoy!
+                        <h3>Instructions</h3>
+                        <p align="left">Sift flour, baking powder, sugar, and salt together in a large bowl. Make a well in the center and add milk, melted butter, and egg; mix until smooth.
+                            Heat a lightly oiled griddle or pan over medium-high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake; cook until bubbles form and the edges are dry, about 2 to 3 minutes. Flip and cook until browned on the other side. Repeat with remaining batter.
                         </p>
-                
+                        <h3>Tips</h3>
+                        <p>Before mixing your batter, always have pancake toppings ready. 
+                            Wet ingredients first, then dry.
+                            Let the batter rest while the griddle heats.
+                        </p>
+                        <h3>Nutrition Information</h3>
+                        <p><br>Calories: 430.8
+                            <br>Fat: 18.77g
+                            <br>Sodium: 693.9mg
+                            <br>Carbohydrates: 55.9g
+                            <br>Fiber: .75g
+                            <br>Sugars: 8.6g
+                            <br>Protein: 8.64g</p>
                     </div>
                     <div class = "meal-img">
-                        <img src = "./img/Longanisa.webp" alt = "">
+                        <img src = "./img/pancakes.jpg" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/uxpfxkb4" class="meal-link-btn" >Watch Video</a>
+                        <a href="https://www.youtube.com/watch?v=NCMKedZvnyI" class="meal-link-btn" >Watch Video</a>
                     </div>
                 </div>
             </div> 
@@ -497,40 +613,70 @@
                 </button>
 
                 <!-- recipe details -->
-                <div class="meal-content">
-                    <h2 class="meal-name">Chicken Burger</h2>
+                <div class="meal-content">Baingan Ka Bharta</h2>
                     <div class="meal-about">
                         <h3 class="meal-title-about">About Meal</h3>
-                        <p class="meal-descript-about">Prepare the buns! For the ideal stuffing for juicy burgers, coat or marinate chicken thighs and breast. Dig it after adding toppings like slaw and sauce along with your selected side dishes.
+                        <p class="meal-descript-about">Baingan bharta or Baigan Chokha is an Indian dish prepared by mincing grilled eggplant and mixing it with tomato, onion, herbs and spices. Grilling the eggplant over charcoal or direct fire infuses the dish with a smoky flavour.
                         </p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
-                        <p><br>3 boneless chicken breasts (around half a kg)
-                            <br>1 tspn of pepper
-                            <br>1 tspn of salt
-                            <br>2 tblspns of worcestershire sauce
-                            <br>1 tspn of Mustard powder or all spice powder
-                            <br>2 tblspns of Flour
-                            <br>1 Egg
-                            <br>1 1/2 cups of Breadcrumbs
-                            <br>Soft seeded burger buns
-                            <br>Mayonnaise or KFC Zinger Sauce
+                        <h3>Ingredients</h3>
+                        <p><br>400 grams brinjal / baingan / eggplant
+                            <br> clove garlic
+                            <br> chilli
+                            <br> tsp oil
+                            other ingredients:
+                            <br> tbsp oil
+                            <br> tsp cumin / jeera
+                            <br> dried red chilli, broken
+                            <br> inch ginger, finely chopped
+                            <br> clove garlic, finely chopped
+                            <br> onion, finely chopped
+                            <br> tsp kashmiri red chilli powder
+                            <br> tsp coriander powder
+                            <br> tomato, finely chopped
+                            <br> tsp salt
+                            <br> tsp garam masala
+                            <br> tbsp coriander, finely chopped
                         </p>
-                        <h3>Instruction:</h3>
-                        <p><br>1. If your chicken breasts are too big, slice them before cooking. Then, marinade the chicken breasts in the Worcestershire sauce, pepper, salt, mustard, or all-spice powder. Leave the chicken for at least four hours or over night.
-                            <br>2. An egg and two tablespoons of water should be beaten together to make the batter, which should then be set aside.
-                            <br>3. Chicken breasts that have been marinated should be heavily dusted in flour. They should be well coated after being dipped in both the egg and the breadcrumbs.
-                            <br>4. The coated chicken breasts should be deep-fried in heated oil over a medium-high heat until they are crisp and golden brown.
-                            <br>5. The finished burger should be stacked with the lettuce on top, followed by the chicken, and then the mayonnaise or KFC zinger sauce. The buns should be cut in half and lightly toasted. If you'd like a cheesy kick, add some sliced American cheese.
+                        <h3>Instructions</h3>
+                        <p align="left">Firstly, take large-sized brinjal and make 4 slits.
+                            stuff in 3 garlic and 1 chilli in each slit.
+                            grease the baingan with oil as it helps to peel off the skin easily once roasting.
+                            start roasting on gas stove flipping occasionally.
+                            roast until brinjal turns dark and cooked completely from inside.
+                            cool the baingan completely and start to peel the skin off.
+                            take off the head of brinjal and check if the brinjal is cooked completely from inside.
+                            mash the eggplant with the help of a fork. keep aside.
+                            in a large kadai heat 2 tbsp oil and saute 1 tsp cumin, 1 dried red chilli, 1 inch ginger and 2 clove garlic.
+                            saute 1 onion until it shrinks slightly.
+                            further add ½ tsp chilli powder, 1 tsp coriander powder and saute till spices turn aromatic.
+                            add in 1 tomato and saute until tomatoes turn soft and mushy.
+                            now add in roasted and mashed brinjal along with 1 tsp salt.
+                            mix and mash for 5 minutes or until flavours are well combined.
+                            add ½ tsp garam masala and 2 tbsp coriander. mix well.
+                            finally, enjoy baingan ka bartha with hot phulka or rice.
                         </p>
-                
-                    </div>
+                        <h3>Tips</h3>
+                        <p align="left">Firstly, roasting brinjal on low to medium flame helps in uniform cooking and adds flavour.
+                            Also, you can roast tomato along with brinjal.
+                            Additionally, mashing uniformly helps to blend the flavours.
+                            Finally, baingan ka bartha recipe can just be prepared with green chilli or red chilli powder.</p>
+                        <h3>Nutrition Information</h3>
+                        <p> <br>Calories 117.
+                            <br>Total Fat 5.6g 7%
+                            <br>Saturated Fat 0.5g 2%
+                            <br>Trans Fat 0.1g.
+                            <br>Polyunsaturated Fat 3.5g.
+                            <br>Monounsaturated Fat 1.2g.
+                            <br>Cholesterol 0mg 0%
+                            <br>Sodium 356mg 15%</p>
+                        </div>
                     <div class = "meal-img">
-                        <img src = "./img/Burger.webp" alt = "">
+                        <img src = "./img/baingan.jpg" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/td757uct" class="meal-link-btn" >Watch Video</a>
+                        <a href="https://www.youtube.com/watch?v=U-Km4u20cI8" class="meal-link-btn" >Watch Video</a>
                     </div>
                 </div>
             </div> 
@@ -542,45 +688,42 @@
 
                 <!-- recipe details -->
                 <div class="meal-content">
-                    <h2 class="meal-name">Menudo</h2>
+                    <h2 class="meal-name">Jalebi</h2>
                     <div class="meal-about">
                         <h3 class="meal-title-about">About Meal</h3>
-                        <p class="meal-descript-about">Popular pork dish in the Philippines is menudo. It is frequently served during events like fiestas. There are many ways to make menudo; some people add hotdog pieces, raisins, pickle bits, and even other seasonings to boost the umami flavors of this stew made of pork and tomatoes. There may be a unique variant in every house, town, or province!
+                        <p class="meal-descript-about">Jalebi is a popular sweet snack in South Asia, Middle East, Africa, and Mauritius. It goes by many names, including jilapi, zelepi, jilebi, jilipi, zulbia, jerry, mushabak, z’labia, zengoula or zalabia. 
                         </p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
-                        <p><br>1/4 cup cooking oil
-                            <br>2 pcs potatoes, medium sized, cut in cubes
-                            <br>1 pc carrot, medium sized, cut in cubes
-                            <br>6 cloves garlic, minced
-                            <br>1 pc onion, minced
-                            <br>250 grams pork kasim, cut into small cubes
-                            <br>250 grams pork liempo, cut into small cubes
-                            <br>250 grams pork liver, cut in small cubes
-                            <br>1 (250 g) pack tomato sauce
-                            <br>2 pcs Knorr Pork Broth Cube
-                            <br>1 1/2 cups water
-                            <br>1 tsp sugar
-                            <br>ground black pepper to taste
-                            <br>2 tbsp raisins
-                            <br>1 cup cubed red and green bell pepper
-                            <br>Optional: 2 bunches Bok-choi, sliced
+                        <h3>Ingredients</h3>
+                        <p> <br>3 cup all purpose flour
+                            <br>2 cup hung curd
+                            <br>1/2 cup ghee
+                            <br>3 cup sugar
+                            <br>5 strand saffron
+                            <br>1/2 teaspoon powdered green cardamom
+                            <br>1/2 cup corn flour
+                            <br>1 1/2 pinch baking soda
+                            <br>2 cup sunflower oil
+                            <br>3 cup water
+                            <br>4 drops rose essence
+                            <br>1/2 teaspoon edible food color
                         </p>
-                        <h3>Instruction:</h3>
-                        <p><br>Let’s begin by sautéing the onion and garlic in hot oil until lightly browned.
-                           <br>Add the pork kasim and liempo next and fry until slightly brown in color before adding the liver. Cook for 2 minutes.
-                           <br>Drop in the Knorr Pork Broth Cubes and give this a nice stir to dissolve completely before adding the tomato sauce, water, sugar and black pepper. Mix this well.
-                           <br>Now, gently place the potatoes and carrots in the pan. Continue to cook over low heat until meat and potatoes are cooked through and the sauce has thickened.
-                           <br>Finally, add raisins and bell peppers and just allow to cook for 2 minutes longer. If you're adding Bok-Choi, add at this point. Here’s a dish that will bring the entire family together. Pork Menudo, just like home, is always close to your heart.
+                        <h3>Instructions</h3>
+                        <p align="left"> <br>Step 1: Prepare the Jalebi batter and let it ferment overnight
+                            To make this easy Jalebi recipe, mix together all-purpose flour, cornflour and baking soda in a bowl. Now, add ghee and food colour to the above mixture and give a mix. To make a thick batter add hung curd and water. Mix well until it is thick but has a slightly flowing consistency. Keep it aside for 8-10 hours to ferment. This step is important to give that unique "khatta" taste to Jalebi. To make the sugar syrup, heat water in a pan over medium flame. Add sugar and mix until fully dissolved. Simmer the syrup until it attains one-string consistency. Add saffron, cardamom powder and rose essence. Stir well to prepare the final sugar syrup. This will be used to soak the jalebis and give them their signature sweetness.
+                            <br>Step 2: Deep fry the Jalebis
+                            Now, heat oil in a pan over medium flame for deep frying. Fill the jalebi batter in a muslin cloth and pierce a small hole in the cloth. You can even use a squeezy bottle (ketchup bottles with a small nozzle on top) to make jalebis. Now just squeeze the muslin cloth to make concentric circles. Move from inside to outside to make perfect circles. Fry till jalebis from both the sides until they are crispy in texture and golden in colour.
+                            <br>Step 3: Soak the Jalebis in sugar syrup and serve
+                            Soak the jalebis in sugar syrup for 3-4 minutes in warm sugar syrup. Ensure that the sugar syrup is warm and not very hot, as this will make the jalebis limp. Don't soak the jalebis for too long if you wish to retain their crispiness. Now, remove the jalebis from the syrup and place it on a tray lined with butter paper or foil. Decorate with silver foil (optional) and serve the jalebis hot, warm or at room temperature with creamy Rabri. Note: To make the jalebi even more delicious, add a little bit of ghee to the batter, this will give your jalebi that perfect aroma. To the crispy Jalebi, don't forget to ferment the batter overnight.
                         </p>
                 
                     </div>
                     <div class = "meal-img">
-                        <img src = "./img/Menudo.webp" alt = "">
+                        <img src = "./img/jalebi.jpg" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/5f558f59" class="meal-link-btn" >Watch Video</a>
+                        <a href="https://www.youtube.com/watch?v=pdFm9Rnz4H8" class="meal-link-btn" >Watch Video</a>
                     </div>
                 </div>
             </div> 
@@ -592,43 +735,53 @@
 
                 <!-- recipe details -->
                 <div class="meal-content">
-                    <h2 class="meal-name">Tapsilog</h2>
+                    <h2 class="meal-name">Veg Pulao</h2>
                     <div class="meal-about">
                         <h3 class="meal-title-about">About Meal</h3>
-                        <p class="meal-descript-about">If there's one thing that could make a non-morning person scramble out of their bed before noon (your delivery rider calling you doesn't count, by the way), it's the intoxicating smell of sinangag (fried garlic rice), fried egg, and of course, tapa wafting through the air from the kitchen and into your room.
+                        <p class="meal-descript-about">Vegetable Pulao (Veg Pulav) is a spicy rice dish prepared by cooking rice with various vegetables and spices.
                         </p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
-                        <p><br>1 lb. beef sirloin sliced thinly
-                            <br>3 pieces eggs
-                            <br>6 tablespoons cooking oil
-                            <br><b>Tapa marinade</b>
-                            <br>3 tablespoons Knorr Liquid Seasoning
-                            <br>6 cloves crushed garlic
-                            <br>¾ cups pineapple juice
-                            <br>2 tablespoons brown sugar
-                            <br>¼ teaspoon ground white pepper
-                            <br><b>Sinangag</b>
-                            <br>5 cups leftover rice
-                            <br>1 teaspoon salt
-                            <br>5 cloves garlic crushed
+                        <h3>Ingredients</h3>
+                        <p><br>1/2 cup Basmati Rice (long grained rice)
+                            <br>1 medium Onion, finely chopped
+                            <br>1 small Tomato, finely chopped
+                            <br>1/4 cup Green Peas (mutter), fresh or frozen
+                            <br>3 tablespoons finely chopped French Beans
+                            <br>1/4 cup finely chopped Carrot
+                            <br>1 small piece of Bay Leaf
+                            <br>1-inch piece of Cinnamon
+                            <br>2 Cloves
+                            <br>1/4 teaspoon Garam Masala Powder
+                            <br>1/8 teaspoon Turmeric Powder
+                            <br>1/2 teaspoon Red Chilli Powder
+                            <br>2 tablespoons finely chopped Coriander Leaves
+                            <br>2 tablespoons Oil
+                            <br>1 teaspoon Ghee
+                            <br>1 cup Water
+                            <br>Salt to taste
                         </p>
-                        <h3>Instruction:</h3>
-                        <p><br>1. Prepare the tapa by placing the beef in a large bowl. Combine with all the tapa marinade ingredients. Mix well and cover the bowl. Place inside the fridge and marinate overnight.
-                            <br>2. Cook the garlic fried rice (sinangag na kanin) by heating 3 tablespoons cooking oil in a pan. Add crushed garlic. Cook until garlic turns light brown. Add the leftover rice. Stir-fry for 3 minutes.
-                            <br>3. Season with salt. Continue to stir-fry for 3 to 5 minutes. Set aside.
-                            <br>4. Start to cook the tapa. Heat a pan and pour the marinated beef into it, including the marinade. Add ¾ cups water. Let the mixture boil. Cover the pan and continue to cook until the liquid reduces to half. Add 3 tablespoons cooking oil into the mixture. Continue to cook until the liquid completely evaporates. Fry the beef tapa in remaining oil until medium brown. Set aside.
-                            <br>5. Fry the egg by pouring 1 tablespoon oil on a pan. Crack a piece of egg and sprinkle enough salt on top. Cook for 30 seconds. Pour 2 tablespoons water on the side of the pan. Cover and let the water boil. Continue to cook until the egg yolks gets completely cooked by the steam.
-                            <br>6. Arrange the beef tapa, sinangag, and fried egg on a large plate to form Tapsilog. Serve with vinegar as dipping sauce for tapa.
+                        <h3>Instructions</h3>
+                        <p align="left">
+                            Wash rice and soak it in water for 15-20 minutes. Drain and keep aside until needed.
+                            Heat ghee and oil together in a pressure cooker (2-liter capacity, stainless steel cooker) on low flame. Add bay leaf, cinnamon, clove, and sauté for 30 seconds. Add onion and sauté until it turns light brown or for approx. 2 minutes.
+                            Add chopped tomato, green peas, french beans and carrot. Stir-fry them for approximately 2 minutes.
+                            Add soaked (drained) rice, garam masala powder, turmeric powder, red chilli powder and salt.
+                            Stir-fry them for approximately 2 minutes. Add 1 cup water and mix well.
+                            Close the lid and cook over medium flame for 2 whistles. When 1st whistle is completed, reduce the flame to low and cook until another whistle. Turn off flame.
+                            Let it cool at room temperature until pressure inside cooker comes down naturally. Open the lid carefully and fluff the rice with a fork. Transfer it to a serving bowl and garnish with fresh coriander leaves.
                         </p>
-                
+                        <h3>Tips</h3>
+                        <p align="left">If you are using pressure cooker made of aluminum then cook it for 2 whistles on medium flame.
+                            You can prepare it in large quantity in larger pressure cooker. Just use rice and water in 1:2 ratios. i.e. for every one cup rice two cups water should be added.
+                            You can also prepare equally delicious mixed vegetable rice pulao in a pan with a lid. Use same amount of ingredients as mentioned in this recipe, cover pan with a lid and cook it on low flame for 8-10 minutes. Do not open the lid in between while cooking. After turning off the flame, open the lid after 7-8 minutes. However, cooking in a pan may require more water as steam will escape easily, hence add 1/4 cup more water for given recipe.
+                        </p>
                     </div>
                     <div class = "meal-img">
-                        <img src = "./img/Tapsilog.webp" alt = "">
+                        <img src = "./img/vegpulao.jpg" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/5xh9wjtw" class="meal-link-btn" >Watch Video</a>
+                        <a href="https://www.youtube.com/watch?v=UDrJ2T8Ss_Q" class="meal-link-btn" >Watch Video</a>
                     </div>
                 </div>
             </div> 
@@ -640,46 +793,56 @@
 
                 <!-- recipe details -->
                 <div class="meal-content">
-                    <h2 class="meal-name">Potato Egg Skillet</h2>
+                    <h2 class="meal-name">Paneer Butter masala</h2>
                     <div class="meal-about">
                         <h3 class="meal-title-about">About Meal</h3>
                         <p class="meal-descript-about">In cuisine, an omelette is a dish made from beaten eggs, fried with butter or oil in a frying pan. It is quite common for the omelette to be folded around fillings such as chives, vegetables, mushrooms, meat, cheese, onions or some combination of the above. 
                         </p>
                     </div>
                     <div class = "meal-instruct">
-                        <h3>Ingridients:</h3>
-                        <p><br>8 strips raw bacon
-                            <br>1 lbs Yukon gold potatoes, diced into bite sized pieces
-                            <br>1 small yellow onion, diced
-                            <br>½ red bell pepper, diced
-                            <br>½ green bell pepper, diced
-                            <br>3 cloves garlic, minced
-                            <br>1 teaspoon cumin
-                            <br>¼ teaspoon chili powder
-                            <br>¼ teaspoon paprika
-                            <br>½ teaspoon black pepper
-                            <br>½ teaspoon coarse salt
-                            <br>4 eggs
-                            <br>¼ cup mozzarella cheese, grated
-                            <br>¼ cup cheddar cheese, grated
-                            <br>Extra virgin olive oil for extra drizzling
-                            <br>Fresh cilantro roughly chopped, thinly sliced chives for garnish
+                        <h3>Ingredients</h3>
+                        <p><br>1.5 cups Paneer cubes
+                            <br>¾ cup Onion, cubed 2 small sized
+                            <br>1 cup Tomato, cubed 2 small sized
+                            <br>4 Garlic cloves
+                            <br>1 teaspoon Ginger chopped
+                            <br>2 Green chilli medium spice
+                            <br>5 Cashew nuts
+                            <br>½ cup Milk
+                            <br>¼ cup Cooking cream
+                            <br>1 teaspoon Kasoori methi
+                            <br>1.5 teaspoon Red chilli powder
+                            <br>1 teaspoon Coriander powder
+                            <br>¼ teaspoon Turmeric powder
+                            <br>Salt
+                            <br>2 teaspoon Oil Divided
+                            <br>1 tablespoon Butter Divided
+                            <br>3 tbsp Coriander leaves
                         </p>
-                        <h3>Instruction:</h3>
-                        <p><br>1. Preheat oven to 400˚F. Place strips of bacon in a large (at least 10 inch), oven safe skillet. Cook over medium low heat on both sides until cooked through but not yet crispy, about 10 minutes. Remove from heat to a paper towel lined plate and set aside, leaving the bacon grease in the pan. When the bacon is cool enough to handle, roughly dice.
-                            <br>Increase the heat to medium high, add the potatoes, bell pepper, and onion and cook for 7- 8 minutes, stirring frequently, until starting to soften and can be pierced with a fork
-                            <br>Add garlic, cumin, chili powder, paprika, black pepper, and salt. Cook for 1-2 minutes, until garlic is fragrant.
-                            <br>Using a spoon, create 4 to 6 holes (depending on how many eggs you want) in the hash mixture for the eggs. Distribute the cheeses evenly into each hole, and then crack one egg into each hole.
-                            <br>Place in the preheat oven and cook for 8-10 minutes, until egg white is set but the yolk is still runny.
-                            <br>Remove from heat. Sprinkle with cooked bacon. Garnish with fresh ground black pepper, cilantro and chives.
-                        </p>
+                        <h3>Instructions</h3>
+                        <p align="left">To start with, heat a pan with oil, 1 teaspoon butter. Add garlic, ginger and green chillies.
+                            Tip in cubed onion and give it a fry. Add cashews and saute until onion turn translucent.
+                            Remove in a plate for cooling.
+                            Meanwhile, keep paneer cubes in hot water until use.
+                            Grind it along with cubed tomatoes to a smooth paste.
+                            Heat oil and temper with Cardamom, cinnamon and cloves.
+                            Add the ground onion tomato paste and give it a stir.
+                            Tip in red chilli powder, coriander powder, turmeric, kasoori methi and mix well.
+                            Continue frying the masala for  4-5 minutes in medium flame or until the raw smell goes off.
+                            The onion tomato mixture should be thick, shiny and ooze oil. Add oil in between if needed.
+                            After that, pour milk little at a time in low flame and stir well to mix. Repeat again until you add all the milk.
+                            Adjust water (I added ¼ cup) and sprinkle required salt. Mix well.
+                            Once it start to bubble again, add paneer drained from water.
+                            Mix well and in goes the cooking cream.
+                            Keep the flame in low and don't let the gravy boil vigorously. Just mix in low flame for 2 minutes and switch off the flame.
+                            Garnish with 3 tablespoon of coriander leaves. Top it with remaining butter.</p>
                 
                     </div>
                     <div class = "meal-img">
-                        <img src = "./img/Potato-Breakfast-Skillet.webp " alt = "">
+                        <img src = "./img/paneer butter masala.jpg" alt = "">
                       </div>
                       <div class = "meal-link">
-                        <a href="https://tinyurl.com/yz55k3bv" class="meal-link-btn" >Watch Video</a>
+                        <a href="https://www.youtube.com/watch?v=U1LVDFwi8qI" class="meal-link-btn" >Watch Video</a>
                     </div>
                 </div>
             </div> 
@@ -691,17 +854,16 @@
             <!--Footer-->
     <div class="footer">
         <div class="social-btn">
-            <a href="https://www.facebook.com/Cmedsss" target="_blank" ><i class="	fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/tiaanmeds/" target="_blank" ><i class="	fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/tianmeds/" target="_blank"><i class="	fab fa-linkedin"></i></a>
-            <a href="https://github.com/TianMeds" target="_blank" "><i class="	fab fa-github"></i></a>
+            <a href="https://www.instagram.com/tanupriya924?igsh=MTVyeTFkbTB1dTJvdg==" target="_blank" ><i class="	fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/tanu-priya-a70752251" target="_blank"><i class="	fab fa-linkedin"></i></a>
+            <a href="https://github.com/tanupriyaa" target="_blank" "><i class="	fab fa-github"></i></a>
         </div>
             <div class="quick-bar">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </div>
-        <p>Copyright &copy; 2022 Christian Medallada. All right reserved</p>  
+        <p>Copyright &copy; 2023 TMSP. All right reserved</p>  
     </div>
 
     <!--Ending of Footer-->

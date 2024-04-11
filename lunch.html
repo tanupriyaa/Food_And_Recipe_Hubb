@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Lunch</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="./img/logo1.png" class="brand-name">
+            <a href="#" class="bg">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Meals
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="breakfast.html">Breakfast</a>
+                          <a href="lunch.html">Lunch</a>
+                          <a href="dinner.html">Dinner</a>
+                          <a href="desserts.html">Desserts</a>
+                        </div>
+                      </div></li>
+                      <li><div class="dropdown">
+                        <button class="dropbtn">Occassions
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="ganesh.html">Ganesh Chaturthi</a>
+                          <a href="dasara.html">Dussehra</a>
+                          <a href="diwali.html">Diwali</a>
+                          <a href="ramzan.html">Ramzan</a>
+                          <a href="christmas.html">Christmas</a>
+                          <a href="sankranti.html">Makar Sankranti</a>
+                        </div>
+                      </div></li>
+                      
+                      </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form id="form" role="search">
+                          <input
+                            type="search"
+                            id="query"
+                            name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content"
+                          />
+                          <button style="width: 10px">&#8981;</button>
+                        </form>
+                        <script>
+                          const f = document.getElementById("form");
+                          const q = document.getElementById("query");
+                          const google = "https://www.allrecipes.com/";
+                          const site = "";
+        
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + "+" + q.value;
+                            const win = window.open(url, "_blank");
+                            win.focus();
+                          }
+        
+                          f.addEventListener("submit", submitted);
+                        </script>
+                </ul>
+            </div>
+        </nav>
+    <div class="headerl">
+    <div class="card-grid" >
+        <div class="food-list" id="food-list">
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/biryani.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Chicken Biryani </h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
+                    </div>
+                </div>
+               
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/butterchicken.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Butter Chicken</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get3rdRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+               
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/vegpulao.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3>Vegetable Pulao</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get10thRecipe()">Get Recipe</button>
+                    </div>
+                
+        </div> 
+        <div class = "meal-detail" id="meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Chicken Biryani</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Biryani is a mixed rice dish that was thought to have originated from ancient Iran before settling in modern India. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1 cup boiled basmati rice
+                        <br>1/2 teaspoon mint leaves  
+                        <br>600 gm chicken
+                        <br>1 tablespoon garam masala powder
+                        <br>salt as required
+                        <br>1 teaspoon saffron
+                        <br>2 teaspoon virgin olive oil
+                        <br>1 tablespoon bay leaf
+                        <br>3 green cardamom
+                        <br>1 black cardamom
+                        <br>2 clove, 2 onions
+                        <br>1 teaspoon cumin seeds
+                        <br>4 green chillies
+                        <br>1 teaspoon turmeric
+                        <br>1 tablespoon ginger paste
+                        <br>1 tablespoon garlic paste
+                        <br>1 teaspoon red chilli powder
+                        <br>1 cup hung curd
+                        <br>1/2 tablespoon ginger
+                        <br>2 tablespoon coriander leaves
+                        <br>2 drops kewra
+                        <br>1 tablespoon rose water
+                        <br>1 tablespoon ghee
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">Firstly soak saffron in water to prepare saffron water (one tsp saffron can be soaked in 1/4 cup water).
+                        Next, mix kewra drops in water and mix well to make kewra water. Set them aside for later usage.
+                        Now, chop the onion and coriander leaves and keep them aside.
+                        Heat olive oil in a deep bottomed pan. Once the oil is hot enough, add cumin seeds, bay leaf, green cardamom, black cardamom, cloves in it, and saute for about a minute. 
+                        Then, add chopped onion to it and saute until pink. Now, add chicken into it with slit green chillies, turmeric, salt to taste, ginger-garlic paste, red chilli powder and green chilli paste. Mix well all the spices and cook for 2-3 minutes. Then, add hung curd into it and give a mix.
+                        Turn the flame to medium again and add garam masala in it along with ginger julienned, coriander and mint leaves. Add kewra water, rose water and 1 tsp saffron water in it. Cook till the chicken is tender. Then add 1 cup cooked rice and spread evenly. Then add the remaining saffron water and pour ghee over it. You can now cook the dish without the lid or cover it with a lid to give a dum-effect due to the steam formation.
+                        Cook for 15-20 minutes with a closed lid and garnish with 1 tbsp fried onions and coriander leaves. Serve hot chicken biryani with raita of your choice. Enjoy!
+                    </p>
+            
+                    <h3>Tips</h3>
+                    <p align="left">1. The first and foremost important thing to take care of while preparing chicken biryani recipe is, always use a heavy-bottomed pan as you would not want the chicken getting cooked.
+                        <br>2. The restaurant-style chicken biryani recipe uses the whole chicken in preparation and the chicken can dry when cooking at home. Always use chicken thigh or drumsticks. <br>
+                        3. If you want your chicken to be juicier in your biryani, do not remove the bone. <br>
+                        4. If your cooked rice has turned sticky, spread it on a plate and leave it for 5 minutes. The rice will be separate and fluffy again.
+                        <br>5. Freshly pound spices bring out the best taste in Chicken Biryani Recipe, so make sure that you dry roast all the whole spices for a good 2-3 minutes and then pound or grind them.</p>
+                    <h3>Nutrition Information</h3>
+                    <p>The chicken biryani calories per 500g are 360 calories. Of these, 56 grams come from carbohydrates, 16 grams are from protein, 8 grams are from fat, and the remaining 15 grams are from other nutrients. One chicken biryani, i.e., 1 kg of biryani contains around 720 calories.</p>
+                    </div>
+                <div class = "meal-img">
+                    <img src = "./img/biryani.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=uygb9O-MDPw" class="meal-link-btn">Watch Video</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "third-meal-detail" id="third-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Butter Chicken</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about"> Indian classic combination of chicken, tomato sauce, and a slew of aromatic spices all in one pot to make a flavorful dinner that's just as good as the version you'll get at restaurants. 
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>For 4 servings:
+                        <br>2 lb boneless, skinless chicken breast(910 g), cubed
+                        <br>salt, to taste
+                        <br>pepper, to taste
+                        <br>2 teaspoons chili powder, divided
+                        <br>½ teaspoon turmeric
+                        <br>6 tablespoons unsalted butter, divided
+                        <br>1 ½ cups diced yellow onion(225 g)
+                        <br>3 teaspoons garam masala
+                        <br>1 teaspoon ground cumin
+                        <br>1 teaspoon cayenne pepper
+                        <br>1 tablespoon grated ginger
+                        <br>3 cloves garlic, minced
+                        <br>1 3-inch cinnamon stick
+                        <br>14 oz tomato sauce(395 g)
+                        <br>1 cup water(240 mL)
+                        <br>1 cup heavy cream(240 mL)
+                        <br>cooked rice, for serving
+                        <br>chopped fresh cilantro, for garnish
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left"><br>In a large bowl, season the chicken with salt, pepper, 1 teaspoon of chili powder, and the turmeric. Let sit for 15 minutes to marinate.
+                        Melt 2 tablespoons of butter in a large pot over medium heat. Brown the chicken, then remove from the pot.
+                        Melt another 2 tablespoons of butter in the pot, then add the onion, garam masala, remaining teaspoon of chili powder, the cumin, ginger, garlic, cayenne, cinnamon, salt, and pepper. Cook until fragrant.
+                        Add the tomato sauce and bring to a simmer.
+                        Add the water and cream and return to a simmer.
+                        Return the chicken to the pot, cover, and simmer for 10-15 minutes.
+                        Stir in the remaining 2 tablespoons of butter and season with more salt and pepper to taste.
+                        Serve the chicken over rice and garnish with cilantro.
+                        Enjoy!
+                        </p>
+                    <h3>Tips</h3>
+                    <p align="left"> Marination is the key to get flavorful, tender & succulent pieces of chicken.
+                        Yogurt in the marinade tenderizes the chicken so do not skip it.
+                        Makhani recipe never uses onion. However using them helps to balance the tang/sour taste of tomatoes, especially if you are using passata or canned tomatoes.                            
+                        The rich taste in the gravy comes from the cashews (or almonds) & cream.                            
+                        You can make the gravy ahead and refrigerate. Just grill the marinated chicken when needed and heat up the gravy. Then add the grilled chicken.</p>
+                    <h3>Nutrition Information</h3>
+                    <p>Calories 799
+                        <br>Fat 52g
+                        <br>Carbs 15g
+                        <br>Fiber 3g
+                        <br>Sugar 8g
+                        <br>Protein 74g</p>
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/butterchicken.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=a03U45jFxOI" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div>  
+    </div>
+         <!--Script for Javascript-->
+    <script src="./assets/l1.js"></script>
+</body>
+</html>

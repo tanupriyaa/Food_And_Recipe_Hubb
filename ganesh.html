@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Ganesh Chaturthi</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="./img/logo1.png" class="brand-name">
+            <a href="#" class="bg">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Meals
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="breakfast.html">Breakfast</a>
+                          <a href="lunch.html">Lunch</a>
+                          <a href="dinner.html">Dinner</a>
+                          <a href="desserts.html">Desserts</a>
+                        </div>
+                      </div></li>
+                      <li><div class="dropdown">
+                        <button class="dropbtn">Occassions
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="ganesh.html">Ganesh Chaturthi</a>
+                          <a href="dasara.html">Dussehra</a>
+                          <a href="diwali.html">Diwali</a>
+                          <a href="ramzan.html">Ramzan</a>
+                          <a href="christmas.html">Christmas</a>
+                          <a href="sankranti.html">Makar Sankranti</a>
+                        </div>
+                      </div></li>
+                      
+                      </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form id="form" role="search">
+                          <input
+                            type="search"
+                            id="query"
+                            name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content"
+                          />
+                          <button style="width: 10px">&#8981;</button>
+                        </form>
+                        <script>
+                          const f = document.getElementById("form");
+                          const q = document.getElementById("query");
+                          const google = "https://www.allrecipes.com/";
+                          const site = "";
+        
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + "+" + q.value;
+                            const win = window.open(url, "_blank");
+                            win.focus();
+                          }
+        
+                          f.addEventListener("submit", submitted);
+                        </script>
+                </ul>
+            </div>
+        </nav>
+    <div class="card-grid" >
+        <div class="food-list" id="food-list">
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/ravamodak.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Rava Modak</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get12thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+            
+
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/motichur.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Motichur Laddu</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get13thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/vada.jpeg">
+                    </div>
+                    <div class="card-body" >
+                    <h3>Medu vada</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get14thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+             
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/gv.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Gutti Vankaya Kura</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get15thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+             </div>
+                <div class = "twelth-meal-detail" id="twelth-meal-detail">
+                    <!-- recipe close btn -->
+                    <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                        <i class ="fas fa-times"></i>
+                    </button>
+    
+                    <!-- recipe details -->
+                    <div class="meal-content">
+                        <h2 class="meal-name">Rava Modak</h2>
+                        <div class="meal-about">
+                            <h3 class="meal-title-about">About Meal</h3>
+                            <p class="meal-descript-about">Rava Modak are sweet dumplings made with semolina and stuffed with coconut jaggery filling and flavored with cardamom powder.</p>
+                        </div>
+                        <div class = "meal-instruct">
+                            <h3>Ingredients</h3>
+                            <p><br>2 cups semolina (fine sooji or fine rava)
+                                <br>5 cups grated coconut
+                                <br>5 cup powdered jaggery or add as required
+                                <br>5 cups water
+                                <br>teaspoon green cardamoms - or 4 to 5 green cardamoms crushed or powdered
+                                <br>teaspoon oil or ghee
+                                <br>teaspoon salt or add as required
+                            </p>
+                            <h3>Instructions</h3>
+                            <p><br>Mix the powdered jaggery with the coconut in a heavy pan or kadai.
+                                Keep the pan or kadai on a low heat. Stir the mixture often.
+                                The jaggery would start melting at first. Later it will continue to cook.
+                                Cook this filling mixture till the jaggery starts thickening. It should not have any liquids in it. Once the mixture has cooked then add the cardamom powder and mix well.
+                                Don't over cook as then mixture would become dense and hard.
+                                Keep aside for cooling the filling. Note that as the filling cools it will thicken.
+                                Making Rava Dough
+                                Take water in a saucepan or any pan. Add oil and salt in it.
+                                
+                                Bring the water to a rolling boil. When it comes to a rolling boil then switch off the heat and place it on the kitchen countertop.
+                                Add the semolina or rava to the hot water.
+                                Stir with a wooden spatula or spoon till all the semolina has been incorporated in the water.
+                                Mix really well. Now keep this pan on low heat for 5 to 6 minutes.
+                                Continously stir so that the rava does not stick and get burnt.
+                                After five minutes switch off the heat.
+                                Taste a pinch of the dough. (only if you are making this for your family and not for Bhagwan Ganesha).
+                                If the semolina feels undercooked, then cook for a few more minutes. Ensure that the rava is cooked well and not undercooked.
+                                
+                                Cover the pan with a lid for 5 to 6 minutes.
+                                The dough would be still hot when the kneading has to be done.
+                                If you cannot manage the heat, then let it cool for a few minutes more.
+                                Knead well and make a smooth dough.
+                                When kneading apply some oil on your palms. There should be no lumps in the dough after kneading.
+                                Making Rava Modak
+                                Now take a lemon sized ball from the dough.
+                                Flatten the dough ball on the palm of your hands or with your fingers.
+                                Place a few spoonsfuls of the coconut-jaggery filling in the center.
+                                
+                                Pinch the edges and bring the fluted edges in the center.
+                                Join the center and pinch off the top. Taper the top.
+                                Make the rava modaks in a similar way.
+                                You don't need to steam them further.
+                                Serve rava modak to Bhagwan Ganesha.</p>
+                            <h3>Nutrition Information</h3>
+                            <p><br>Amount Per Serving
+                                <br>Calories 266  Calories from Fat 81\
+                                <br>Fat 9g
+                                <br>Saturated Fat 7g
+                                <br>Sodium 49mg
+                                <br>Potassium 125mg
+                                <br>Carbohydrates 43g
+                                <br>Fiber 3g
+                                <br>Sugar 23g
+                                <br>Protein 4g</p>
+                        </div>
+                        <div class = "meal-img">
+                            <img src = "./img/ravamodak.jpg" alt = "">
+                          </div>
+                          <div class = "meal-link">
+                            <a href="https://www.youtube.com/watch?v=4Dc4mgBHzJE" class="meal-link-btn" >Watch Video</a>
+                        </div>
+                    </div>
+                </div>   
+        <div class = "thirteen-meal-detail" id="thirteen-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Motichur Laddu</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Motichur laddu are soft, delish melt in the mouth ladoo made mainly with gram flour, sugar, and spices.. One of the most popular Indian sweet.</p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1 cup sugar
+                        <br>1/2 cup water
+                        <br>a generous pinch of saffron powder or crushed saffron (kesar)
+                        <br>1 cup besan (gram flour)
+                        <br>a generous pinch of saffron powder or crushed saffron (kesar)
+                        <br>3/4 cup water
+                        <br>2 to 3 black cardamoms - seeds removed and the skins discarded
+                        <br>1/2 tablespoon magaz (melon seeds)
+                        <br>oil for deep frying
+                        <br>a bit of oil or ghee for applying on the palms while shaping the ladoo
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">Make a smooth flowing batter of the gram flour/besan, crushed saffron and water. The batter should neither be thick nor thin. It should be a flowing batter without any lumps. The amount of water to be added depends on the quality of the the gram flour. So you can add more or less than what is mentioned in the recipe.
+
+                        Heat oil for deep frying in a kadai or pan. The oil has to be moderately hot. Take a perforated ladle/spoon. With your hands position the ladle above the oil. You will need one more large ladle/jhara to remove the fried boondis.
+                        Take a large spoon of the besan batter and pour it on perforated ladle/spoon. Press with the other spoon so that the batter falls down from the perforations into the hot oil.
+                        Fry the boondi (gram flour balls) till they become golden. Don't over fry or make them crisp. When the oil stops sizzling, remove the boondis. About 45 seconds to 1 minute is enough to get the correct texture in the boondi.
+                        This step is important because if boondi becomes crisp then motichur laddu won't be soft and they won't be able to absorb the sugar syrup.
+                        Making Motichoor Ladoo
+                        For collecting the fried boondi use a large slotted spoon/jhara. Drain the oil very well after removing the boondi and then add them directly to the sugar syrup. Also note that the sugar syrup should be hot.
+                        
+                        If the sugar syrup is not hot, then just heat it. In case, the sugar syrup crystallizes, then reheat again mixing 1 to 2 tablespoons water. No need to bother about the tailed or flat boondis as we will be pulsing them in the blender later.
+                        Make all the boondis like this and keep on adding them immediately to the sugar syrup. Stir and mix well. The boondis should get softened in the sugar syrup.
+                        In a blender or mixer add the boondi and the sugar syrup. Add 1 tablespoon of hot water and pulse the boondi mixture for a few times to get a smaller shape.
+                        Don't pulse too much otherwise you won't be able to shape the motichur laddu. The amount of water to be added depends on the texture of the boondis.
+                        
+                        If the boondis are a bit crisp, then add 1 or 2 tablespoons more of the hot water. The boondis absorb the hot water and remain soft and moist.
+                        Add the magaz/melon seeds and black cardamom seeds. Mix well.
+                        Apply some oil or ghee on your palms and shape the motichoor ladoo. The mixture would be warm when preparing the laddu. On cooling they become firm.
+                        You can garnish the motichoor ladoo with melon seeds/magaz or raisins. These motichur ladoo can also be refrigerated since they are not made from ghee. If you fry them in ghee then the ghee will solidify on refrigeration.</p>
+                    <h3>Tips</h3>
+                    <p align="left">Use a finer variety of gram flour and which is in its shelf life. Do not use gram flour that has got rancid.
+                        Remember to keep the sugar syrup hot by placing the pan over a bowl or pan of hot water.
+                        Don't over fry the boondi. They should not become crisp.
+                    </p>
+                    <h3>Nutrition Information</h3>
+                    <p><br>Fat 6g
+                        <br> Saturated Fat 1g
+                        <br>Polyunsaturated Fat 1g
+                        <br>Monounsaturated Fat 4g
+                        <br>Cholesterol 3mg
+                        <br>Sodium 10mg
+                        <br>Potassium 112mg
+                        <br>Carbohydrates 27g
+                        <br>Fiber 1g
+                        <br>Sugar 21g
+                        <br>Protein 3g
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/motichur.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=pGj79jrTqiw" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div> 
+        <div class = "fourteen-meal-detail" id="fourteen-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Medu Vada</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Medu vada are crisp and fried doughnut shaped fritters made with black gram (urad dal), herbs and spices. These urad dal vada are also known as Garelu in Andhra, Uzhunnu Vada in Kerala, Uddina Vada in Kannada and Medhu Vadai, Ulundu Vadai in Tamil.</p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1 cup urad dal (husked and split or whole black gram) : 200 grams
+                        <br>2.5 to 3 cups water : for soaking
+                        <br>3 to 4 tablespoons water : for grinding or blending lentils
+                        <br>1/2 teaspoon cumin seeds
+                        <br>1/2 teaspoon black peppercorns whole or crushed
+                        <br>1 tablespoon chopped curry leaves or 7 to 8 curry leaves
+                        <br>1/3 cup finely chopped onions : optional
+                        <br>1 teaspoon chopped green chilies or 1 to 2 green chilies
+                        <br>1 teaspoon finely chopped ginger
+                        <br>1 pinch asafoetida (hing)
+                        <br>1/4 cup chopped coconut pieces
+                        <br>2 tablespoons chopped coriander leaves 
+                        <br>1/2 teaspoon salt or as required
+                        <br>oil for deep frying, as required
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">
+                        Rinse urad dal a couple of times in fresh water. Then soak the lentils for 4 hours or overnight.
+                        Grind or blend the soaked lentils to a smooth batter with water.
+                        If the batter becomes watery, then the instant relief would be to add some semolina or urad dal flour or rice flour to it.
+                        Add all the spices, herbs and salt. Mix well.
+                        Take a bowl of water. Apply some water from the bowl on both your palms. Take some batter in your right hand from the bowl. Give it a round shape by moving it around.
+                        With your thumb make a hole in the center. You can also use banana leaves or zip lock bags to give the medu vada its doughnut shape.
+                        In a kadai (wok) or pan heat oil for deep frying. Keep the heat to medium. 
+                        Once the oil becomes hot, slid the vada gently and carefully into the hot oil.
+                        Shape the batter this way and gently slid them in the oil. Don't overcrowd the kadai or pan with the vada.
+                        Once the vada is slightly golden then gently turn over with a slotted spoon and continue to fry.
+                        Fry them till crisp and golden. The oil should be not very hot, but medium hot. You want the vadas to be cooked from inside. Very hot oil will quickly brown the vadas from outside but they will remain uncooked from inside. Less hot oil will make the medu vada to absorb too much oil. Even if the batter is thin then also the medu vadas will absorb too much oil.
+                        Fry all the medu vada this way till they become evenly browned and crisp.
+                        Drain them on kitchen tissue to remove excess oil.
+                        Serve the medhu vadai, hot or warm with sambar and coconut chutney. It can also be served with other dips like mint chutney, coriander chutney, tomato sauce or onion chutney, tomato chutney etc.
+                        One of the best combination is sambar vada where these medu vadai are dunked in piping hot sambar and served with a side of coconut chutney. This vada sambar meal is finished with steaming hot filter coffee.
+</p>
+                    
+                    <h3>Nutrition Information</h3>
+                    <p><br>Fat 3g5
+                        <br>Saturated Fat 1g
+                        <br>Polyunsaturated Fat 1g
+                        <br>Monounsaturated Fat 3g
+                        <br>Sodium 89mg
+                        <br>Potassium 5mg
+                        <br>Carbohydrates 8g
+                        <br>Fiber 3g
+                        <br>Sugar 1g
+                        <br>Protein 4g
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/vada.jpeg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=5zj93-DvLic" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div> 
+        <div class = "fifteen-meal-detail" id="fifteen-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Gutti Vankaya Kura</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about"> Guti vankaya kura is a stuffed eggplant dish from the Andhra cuisine. Here the stuffing is made from a mix of desiccated coconut, peanuts and spices, which is ground finely. Small tender brinjals are stuffed with this ground masala and then cooked. A bit of tamarind pulp is added to the gravy for a faint sour taste. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>250 grams small purple or green brinjals (baingan) or 12 to 14 brinjals
+                        <br>- 250 grams small purple or green brinjals (baingan) or 12 to 14 brinjals
+                        <br>- 1/2 teaspoon salt added to water for soaking brinjals
+                        <br>- Enough water for soaking brinjals
+                        <br>- 1 large onion or ½ cup finely chopped onion
+                        <br>- 1/2 tablespoon Ginger Garlic Paste or 1 inch ginger + 6 to 7 medium garlic – crushed to a paste
+                        <br>- 1 teaspoon mustard seeds
+                        <br>- 1/2 teaspoon urad dal
+                        <br>- 1/2 teaspoon cumin seeds
+                        <br>- 1 sprig curry leaves
+                        <br>- 2 tablespoon oil
+                        <br>- 2/3 cup water
+                        <br>- Salt as required
+                        <br>- 2 to 3 tablespoon chopped coriander leaves
+                        <br>- 1/2 tablespoon tamarind
+                        <br>- 1/4 cup warm or hot water
+                        <br>- 1/4 cup peanuts
+                        <br>- 2 tablespoon desiccated coconut
+                        <br>- 1 tablespoon coriander seeds
+                        <br>- 1/2 teaspoon cumin seeds
+                        <br>- 1/4 teaspoon methi seeds (fenugreek seeds)
+                        <br>- 3 to 4 dry red chilies
+                        <br>- 1/2 teaspoon turmeric powder
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">First soak 1/2 tbsp tamarind in 1/4 cup warm or hot water for 15 to 20 minutes.
+                        Then squeeze and extract the soaked tamarind into the water. Keep the tamarind pulp aside.
+                        Roasting Peanuts, Spices And Coconut
+                        Heat a small frying pan. Add 1/4 cup peanuts and roast them on a low to medium flame, with frequent stirrings.
+                        
+                        The peanuts have to be roasted well and should not have even a slight rawness in them. Remove the peanuts and keep aside.
+                        To the same pan, add 1 tbsp coriander seeds, 1/2 tsp cumin seeds and 1/4 tsp methi seeds. Skip methi seeds if you do not have them.
+                        Roast these seeds too till they become fragrant. Take care not to over roast or burn them. Remove and keep aside.
+                        In the same pan, now add 2 tbsp desiccated coconut. You can also use fresh coconut instead of desiccated coconut.
+                        Stir continuously and roast the coconut till light golden. Remove and keep aside.
+                        Add 3 to 4 dry red chilies.
+                        
+                        Roast the chilies till the red color changes a shade. You should also get the aroma while roasting them. Once they become aromatic and the color changes, remove and keep aside.
+                        Grinding Masala For Gutti Vankaya
+                        Once cooled, break the red chilies in small pieces and remove the seeds.
+                        Now let the spices cool and then take all of them in a grinder jar.
+                        Add 1/2 tsp turmeric powder.
+                        Now add the tamarind pulp and 3 to 4 tbsp water.
+                        Grind everything to a smooth thick masala. Do grind to a thick paste, otherwise stuffing the brinjals will not be easy.
+                        
+                        Prepping Brinjals To Make Gutti Vankaya Kura
+                        Now rinse and slit each brinjal from the base, keeping the stalks. Soak the brinjals in salted water for 15 to 20 minutes.
+                        Then drain and keep aside. To make the brinjals stand while cooking, just thinly slice a small part from the base.
+                        Later stuff each brinjal very well with the masala paste. Keep aside. Some masala paste will remain. So keep this aside too.
+                        Making Gutti Vankaya Kura
+                        Heat 2 tbsp oil in a 3 litre pressure cooker. Add 1 tsp mustard seeds and allow them to crackle.
+                        Then add 1/2 tsp urad dal and 1/2 tsp cumin seeds.
+                        Saute till the urad dal turns a maroonish red.
+                        Then add 1/2 cup finely chopped onion and 1 sprig of curry leaves.
+                        Saute till the onions turn translucent.
+                        Now add 1/2 tbsp ginger-garlic paste.
+                        Add the remaining masala paste along with 2/3 cup water. mix very well.
+                        Now place the stuffed brinjals gently in the cooker.
+                        Sprinkle salt as per taste.
+                        Cover and pressure cook gutti vankaya curry for 5 to 6 minutes. 
+                        When the pressure settles down, open the lid. Check the doneness by sliding a knife through a brinjal. If the knife slids easily, then the brinjals are cooked. 
+                        If they are not cooked, then add 2 to 3 tbsp water and pressure cook gutti vankaya for 2 to 3 minutes more or till done.
+                        Garnish with coriander leaves and serve gutti vankaya kura with chapatis or steamed rice.
+                        This curry also goes very well with jowar roti or bajra roti.</p>
+                    <h3>Tips</h3>
+                    <p align="left">To balance the sourness of the tamarind, you can add 1/2 to 1 teaspoon of jaggery powder to the gravy.
+                    </p>
+                    <h3>Nutrition Information</h3>
+                    <p><br>Calories 238
+                        <br>Fat 19g
+                        <br>Saturated Fat 4g
+                        <br>Polyunsaturated Fat 3g
+                        <br>Monounsaturated Fat 11g
+                        <br>Sodium 796mg
+                        <br>Potassium 415mg
+                        <br>Carbohydrates 16g
+                        <br>Fiber 6g
+                        <br>Sugar 7g
+                        <br>Protein 5g
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/gv.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=wDxTmPzG4dw" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div> 
+        </div>
+          <!--Script for Javascript-->
+    <script src="./assets/g.js"></script>
+</body>
+</html>

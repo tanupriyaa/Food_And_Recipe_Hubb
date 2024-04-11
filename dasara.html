@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Makar Sankranti</title>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="./img/logo1.png" class="brand-name">
+            <a href="#" class="bg">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Meals
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="breakfast.html">Breakfast</a>
+                          <a href="lunch.html">Lunch</a>
+                          <a href="dinner.html">Dinner</a>
+                          <a href="desserts.html">Desserts</a>
+                        </div>
+                      </div></li>
+                      <li><div class="dropdown">
+                        <button class="dropbtn">Occassions
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="ganesh.html">Ganesh Chaturthi</a>
+                          <a href="dasara.html">Dussehra</a>
+                          <a href="diwali.html">Diwali</a>
+                          <a href="ramzan.html">Ramzan</a>
+                          <a href="christmas.html">Christmas</a>
+                          <a href="sankranti.html">Makar Sankranti</a>
+                        </div>
+                      </div></li>
+                      
+                      </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <form id="form" role="search">
+                          <input
+                            type="search"
+                            id="query"
+                            name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content"
+                          />
+                          <button style="width: 10px">&#8981;</button>
+                        </form>
+                        <script>
+                          const f = document.getElementById("form");
+                          const q = document.getElementById("query");
+                          const google = "https://www.allrecipes.com/";
+                          const site = "";
+        
+                          function submitted(event) {
+                            event.preventDefault();
+                            const url = google + site + "+" + q.value;
+                            const win = window.open(url, "_blank");
+                            win.focus();
+                          }
+        
+                          f.addEventListener("submit", submitted);
+                        </script>
+                </ul>
+            </div>
+        </nav>
+    <div class="headerdasara">
+    <div class="card-grid" >
+        <div class="food-list" id="food-list">
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/besankahalwa.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Besan Ka Halwa</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get26thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+               
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/dryfruitms.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Dry Fruits Milkshake</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get27thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/panakam.jpg">
+                    </div>
+                    <div class="card-body" >
+                        <h3>Panakam</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get28thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/poornalu.webp">
+                    </div>
+                    <div class="card-body" >
+                    <h3> Poornam Boorelu</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get29thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+                <div class="card card-shadow">
+                    <div class="card-header card-image">
+                        <img src="./img/paneer butter masala.jpg">
+                    </div>
+                    <div class="card-body" >
+                    <h3>Paneer Butter Masala</h3>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn" onclick="get11thRecipe()">Get Recipe</button>
+                    </div>
+                </div>
+        </div> 
+        <div class = "twenty6-meal-detail" id="twenty6-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Haleem</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about"> Haleem is a rich and delectable mutton stew, popular in the Middle East and Asia. As common as it is in India, particularly in the city Hyderabad, it is surprising to know that Haleem actually has originated from Persia. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>Gram flour (besan) 2 cups
+                        <br>Sugar 1 cup
+                        <br>Ghee 1/2 cup
+                        <br>Milk 2 cups
+                        <br>Raisins wash and pat dry 2 tablespoons
+                        <br>Cashewnuts chopped 10-12
+                        <br>Almonds slivered 12-15
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">
+                        
+                        Step 1
+                        Take a non-stick pan and roast gram flour on low heat, stirring continuously, for ten to twelve minutes.
+                        Step 2
+                        Add sugar and continue to roast, stirring continuously, for ten more minutes.
+                        Step 3
+                        Add ghee and mix well. Continue to cook for five minutes.
+                        Step 4
+                        Add milk, mix well and cook till you get a halwa consistency.
+                        Step 5
+                        Add raisins, cashewnuts and three fourths of the almond slivers.
+                        Step 6
+                        Mix well and serve hot garnished with the remaining almond slivers.</p>
+            
+                    <h3>Tips</h3>
+                    <p align="left">You can pair Haleem with breads like Baqarkhani or you can have it alone as it is a whole meal in itself.</p>
+                   <h3>Nutrition Information</h3>
+                   <p align="left">Calories : 2386 Kcal
+                    Carbohydrates : 288.2 gm
+                    Protein : 58.5 gm
+                    Fat : 111.3 gm
+                    Other : Iron- 16.8mg</p>
+                    </div>
+                <div class = "meal-img">
+                    <img src = "./img/besankahalwa.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=PO8LofPtuNo" class="meal-link-btn">Watch Video</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "twenty7-meal-detail" id="twenty7-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Dry Fruits Milkshake</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about"> 
+                        Dry fruits milkshake recipe is the perfect beverage to give you a quick energy boost throughout the day! It includes dried fruits, nuts, and plant-based milk making it a great gluten-free and vegan option. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p>
+                        <br>1/4 cup almonds
+                        <br>1/4 cup cashews
+                        <br>1/4 cup raisins
+                        <br>¼ cup pistachios (shelled and unsalted)
+                        <br>7 to 8 dates
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left"><br>
+                        1. Soak 3 to 4 dried figs in hot water for 30 minutes or in water at room temperature for 1 to 2 hours or more until they soften. If you have dried figs that are soft, then there is no need to soak them.
+                        If the dried figs are chewy and hard, then soak them. You can also soak dates if they are hard. If they are soft, then you don’t need to soak them either.
+                        2. Add all of the remaining nuts and dry fruits listed below to a bowl or strainer except the saffron.
+                        3. Optional step is to rinse them. I always rinse the nuts, dry fruits before using them in any recipe.
+                        4. Once the figs have softened roughly chop them. Then, roughly chop the dates and discard the seeds if any.
+                        5. Add the rinsed nuts, raisins, chopped figs and dates in a blender.
+                        6. Add ½ cup chilled milk. I have used soy milk. You can choose to include coconut milk, oats milk, almond milk or dairy milk.
+                        7. Add a pinch of saffron. Saffron gives a beautiful delicate aroma. But if you do not have it, simply skip it.
+                        8. Blend to a semi-fine paste. You can make a fine paste if you prefer. If making for small kids, then make a very fine paste.
+                        9. Add the remaining 2 cups of milk. You can also add sugar if you like – about 1 to 2 tablespoons of raw sugar. In place of raw sugar, you can opt for coconut sugar or palm sugar.
+                        10. Blend again well.
+                        11. Pour the dry fruits milkshake into glasses and serve straightway. You can add some sliced nuts like almond or pistachios or a couple of saffron strands for garnishing if you like.
+
+                    </p>
+                    <h3>Tips</h3>
+                    <p align="left"> Optionally you could also soak these nuts and raisins in hot water for 30 minutes. If you prefer, you can peel the almonds. For small kids, I recommend to peel the almond and the pistachio skins.
+                        Saffron and nutmeg are warm spices, so ideal to add them in your milkshake during winters or monsoons. Cardamom and cinnamon are cooling spices, so best to include them during summers or hot days.
+                        This milkshake is very filling as it contains nuts, dried fruits, and milk so I usually skip my meal when I drink it. It is also a great option during fasting or vrat seasons.
+
+                    </p>
+                    <h3>Nutrition Information</h3>
+                    <p>One glass of Dry Fruit Milkshake provides about 17.1 percent of the total daily calorie requirement of a standard adult diet of 2,000 calories. Dry Fruit Milkshake recipe makes 4 glasses of 220 ml each. 342 calories for 1 glass of Dry Fruit Milkshake, Cholesterol 16 mg, Carbohydrates 30.2g, Protein 9.9g, Fat 20.6g.</p>
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/dryfruitms.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=uz_qS5WjyMg" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div>  
+        <div class = "eleven-meal-detail" id="four-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Paneer Butter masala</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">In cuisine, an omelette is a dish made from beaten eggs, fried with butter or oil in a frying pan. It is quite common for the omelette to be folded around fillings such as chives, vegetables, mushrooms, meat, cheese, onions or some combination of the above. 
+                    </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1.5 cups Paneer cubes
+                        <br>¾ cup Onion, cubed 2 small sized
+                        <br>1 cup Tomato, cubed 2 small sized
+                        <br>4 Garlic cloves
+                        <br>1 teaspoon Ginger chopped
+                        <br>2 Green chilli medium spice
+                        <br>5 Cashew nuts
+                        <br>½ cup Milk
+                        <br>¼ cup Cooking cream
+                        <br>1 teaspoon Kasoori methi
+                        <br>1.5 teaspoon Red chilli powder
+                        <br>1 teaspoon Coriander powder
+                        <br>¼ teaspoon Turmeric powder
+                        <br>Salt
+                        <br>2 teaspoon Oil Divided
+                        <br>1 tablespoon Butter Divided
+                        <br>3 tbsp Coriander leaves
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">To start with, heat a pan with oil, 1 teaspoon butter. Add garlic, ginger and green chillies.
+                        Tip in cubed onion and give it a fry. Add cashews and saute until onion turn translucent.
+                        Remove in a plate for cooling.
+                        Meanwhile, keep paneer cubes in hot water until use.
+                        Grind it along with cubed tomatoes to a smooth paste.
+                        Heat oil and temper with Cardamom, cinnamon and cloves.
+                        Add the ground onion tomato paste and give it a stir.
+                        Tip in red chilli powder, coriander powder, turmeric, kasoori methi and mix well.
+                        Continue frying the masala for  4-5 minutes in medium flame or until the raw smell goes off.
+                        The onion tomato mixture should be thick, shiny and ooze oil. Add oil in between if needed.
+                        After that, pour milk little at a time in low flame and stir well to mix. Repeat again until you add all the milk.
+                        Adjust water (I added ¼ cup) and sprinkle required salt. Mix well.
+                        Once it start to bubble again, add paneer drained from water.
+                        Mix well and in goes the cooking cream.
+                        Keep the flame in low and don't let the gravy boil vigorously. Just mix in low flame for 2 minutes and switch off the flame.
+                        Garnish with 3 tablespoon of coriander leaves. Top it with remaining butter.</p>
+            
+                </div>
+                <div class = "meal-img">
+                    <img src = "./img/paneer butter masala.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=U1LVDFwi8qI" class="meal-link-btn" >Watch Video</a>
+                </div>
+            </div>
+        </div> 
+        
+        
+        <div class = "twenty8-meal-detail" id="twenty8-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Panakam</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about"> It is amazing how we Indians have so much to offer to Gods and Goddesses during festivals, which are equally delicious and wholesome for human consumption too. One such beverage is this Panakam – a special cooling drink from the South Indian cuisine, which is popularly made during the Hindu festival of Ram Navami.</p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1/2 cup jaggery
+                        <br>1 litre water
+                        <br>lemon juice
+                        <br>Dried ginger powder
+                        <br>Green Cardamom powder
+                        <br>Edible camphor
+                        <br>Black pepper powder
+                        <br>Salt 
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">
+                        1. In a bowl, take ½ cup chopped jaggery and 2 cups water. You can add water as required.
+                        2. Mix very well and let the jaggery soak in water for 30 to 40 minutes or till all of it is dissolved. If there are impurities in the jaggery syrup, then filter the solution.
+                        3. Then, add 2 tablespoons lemon juice or juice of 1 medium size lemon.
+                        4. Next, add ¼ teaspoon dried ginger powder (ground ginger).
+                        5. Then, add ⅓ to ½ teaspoon green cardamom powder.
+                        6. Add a pinch of edible camphor. If offering Panakam to deities, then you can add edible camphor. Edible camphor is optional and can be skipped.
+                        7. Next, add ⅛ teaspoon ground black pepper powder.
+                        8. Add a pinch of salt.
+                        9. Mix very well.
+                        10. Offer Panakam to deities. While offering to the deities, you can add a few holy basil leaves (tulsi leaves) in it.
+                    </p>
+            
+                    <h3>Tips</h3>
+                    <p align="left">f the jaggery syrup you've made has impurities in it, then you will have to filter the solution. You could swap the jaggery with palm jaggery but not sugar.
+                        You can adjust the quantities of water, spice powders and lemon juice as per your preferences and requirements.
+                    </p>
+                        <h3>Nutrition Information</h3>
+                        <p>Calories 68
+                            <br>Carbs 17.1g
+                            <br>Sugar 17g
+                    </div>
+                <div class = "meal-img">
+                    <img src = "./img/panakam.jpg" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=oTk9MoMP__Q" class="meal-link-btn">Watch Video</a>
+                </div>
+            </div>
+        </div>
+        <div class = "twenty9-meal-detail" id="twenty9-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+            <!-- recipe details -->
+            <div class="meal-content">
+                <h2 class="meal-name">Poornam Boorelu</h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about"> Haleem is a rich and delectable mutton stew, popular in the Middle East and Asia. As common as it is in India, particularly in the city Hyderabad, it is surprising to know that Haleem actually has originated from Persia. </p>
+                </div>
+                <div class = "meal-instruct">
+                    <h3>Ingredients</h3>
+                    <p><br>1 Cup Urad dal Black Gram Dal
+                        <br>2 Cups Raw Rice regular sona masoori
+                        <br>Salt to taste
+                        <br>1 Cup Split Bengal Gram Chana Dal or Chanaga Pappu
+                        <br>2 Cups Water to pressure cook lentils
+                        <br>1/2 Cup Desiccated Coconut
+                        <br>1 1/2 Cups Powdered Jaggery
+                        <br>1/2 Cup Water to dissolve jaggery
+                        <br>1 tsp Cardamom Powder
+                    </p>
+                    <h3>Instructions</h3>
+                    <p align="left">
+                        Soak rice and lentils separately for 5 hours or overnight.
+Wash soaked rice and dal and drain away the water.
+Add required water while grinding the lentils first to a smooth textured batter.
+Take care that the batter is neither thick nor thin. I'm using an ultra wet grinder.
+Remove the lentils batter to a large bowl and now similarly grind the rice to a smooth batter.
+Remove this batter to the same bowl and mix both the batters using your hands adding salt to it. It should be similar to dosa batter consistency. Set aside in the refrigerator and prepare the filling..
+Wash and soak Bengal gram dal (minimum ½ an hour).
+Discard soaked water, add 2 cups of fresh water to the drained dal and pressure cook over high heat for 3 whistles. Then simmer to low heat for 5 minutes and turn off the heat.
+Open the pressure cooker once the pressure subsides. Drain any excess water in the dal and mash it.
+Take jaggery powder in a saucepan and add ½ cup of water to it.
+Heat over medium heat till the jaggery melts. Turn off the heat. (This is mainly done to remove any impurities in the jaggery)
+Transfer cooked lentils to a wide pan,
+To this add ½ cup of desiccated coconut.
+Now strain jaggery syrup into the mixture in the pan.
+Cook the mixture over medium heat till all the moisture evaporates.
+You get a thick consistency as shown in the pic below. Now turn off the heat.
+Add cardamom powder and mix well. Let the mixture cool completely.
+Make small sized balls out of the mixture. And set aside.
+Deep-frying Poornam Boorelu:
+Remove the batter from the refrigerator and add a pinch of soda and mix well.
+Mean while heat oil in a deep frying pan or kadai over medium heat.
+Once the oil is hot enough, do a test with a pich of the batter. If the oil is hot enough the batter rises to the top immediately.
+Dip each ball of stuffing (poornam) in the batter carefully using fingers or a spoon and coat it well and swipe off the excess drippings and drop them gently into hot oil. Ensure the Poornam is completely covered. I usually use my fingers but today to click pictures, I had to use a spoon.
+Pour oil using the slotted spoon from the sides (like how we do for vadas) which helps in puffing up the boorelu nicely.
+Turn it to the other side and fry until light golden brown.
+You can repeat frying for a minute or two for an extra crust,
+Serve them hot/cold or at room temperature. 
+</p>
+            
+                    <h3>Tips</h3>
+                    <p align="left">Batter for the outer layer should neither be thick nor very thin. The Udad dal batter should be thicker than a dosa batter, but slightly thinner than Idli batter.
+                        If the outer layer is very thick it will reduce the sweetness of poornalu as the outer layer would be thick.
+                        If the batter is of thin consistency, the Boorelu will disintegrate.
+                        In case your batter becomes runny, you can save it by mixing little rice flour to the batter and bring it to the right consistency. But do not use too much, it will result in hard poornalu. This will make the outer covering slightly hard based on how much flour is used.</p>
+                  
+                    </div>
+                <div class = "meal-img">
+                    <img src = "./img/poornalu.webp" alt = "">
+                  </div>
+                  <div class = "meal-link">
+                    <a href="https://www.youtube.com/watch?v=fuc-bjPHD0U" class="meal-link-btn">Watch Video</a>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+</div>
+        <!--Script for Javascript-->
+    <script src="./assets/dasjs.js"></script>
+</body>
+</html>
